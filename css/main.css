@@ -1946,7 +1946,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff9152;
+  background: #34ffff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3155,4 +3155,18 @@ header.post-header {
   .post-body {
     text-align: justify;
   }
+}
+body {
+  background: url("/uploads/bk1.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+.main-inner {
+  background: #fff;
+  opacity: 0.8;
+}
+.header-inner {
+  opacity: 0.8;
 }
