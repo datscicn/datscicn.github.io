@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="数据科学网">
 <meta property="og:description" content="谈及信贷风控，最先联想到的一定是人脸识别、大数据应用、反欺诈、准入策略、风控模型、定额定价等字眼。确实，这些技术在各自的细分领域发挥出了相当的作用，以至于大部分咨询公司把信贷风控和模型策略直接划上了等号，大谈数据增益和各类复杂算法，但在各类风控手段及风控技术大显身手之前，最先需要考虑的是顶层的风控流程设计。合格的风控流程设计，防范欺诈风险、信用风险、操作风险的同时，还应具备健壮性以保证各类突发问">
 <meta property="article:published_time" content="2020-07-15T08:59:31.000Z">
-<meta property="article:modified_time" content="2020-07-16T07:25:26.603Z">
+<meta property="article:modified_time" content="2020-07-17T06:01:52.146Z">
 <meta property="article:author" content="Mr.Zhang">
 <meta property="article:tag" content="策略">
 <meta property="article:tag" content="贷前">
@@ -442,7 +442,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3.7k字
+                  4k字
                 </span>
               
 
@@ -458,7 +458,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  12分钟
+                  13分钟
                 </span>
               
             </div>
@@ -481,19 +481,24 @@
       
         <a id="more"></a>
 <p>谈及信贷风控，最先联想到的一定是人脸识别、大数据应用、反欺诈、准入策略、风控模型、定额定价等字眼。确实，这些技术在各自的细分领域发挥出了相当的作用，以至于大部分咨询公司把信贷风控和模型策略直接划上了等号，大谈数据增益和各类复杂算法，但在各类风控手段及风控技术大显身手之前，最先需要考虑的是顶层的风控流程设计。合格的风控流程设计，防范欺诈风险、信用风险、操作风险的同时，还应具备健壮性以保证各类突发问题产生时流程不会中断，具备灵活性以应对随时需要进行的流程优化和调整。本文就以线上贷款为例，简述其风控流程的设计及常见问题。  </p>
+<p>科技赋能金融，是这个时代的主流。风险管理，是金融发展的必选命题。</p>
+<p>在当代，金融机构在风险管理的每个环节都尽可能地引入计量分析方法，依托大数据进行后台的分析回顾，不断的优化调整，使得金融机构在风险与收益的博弈过程中更快达到平衡，实现局部甚至更多空间的利润最大化。</p>
+<p>风控策略，则是金融机构追求利润最大化的强大武器。</p>
+<p>风控策略，广义上是代表一种风险管理战略思想，狭义上讲，是一个个数据规则组合而成的风险管理架构。作者希望通过此长文，为FAL读者朋友们一次性解释风控策略体系。‘</p>
 <h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h1><h2 id="1-1-贷前风控内容介绍"><a href="#1-1-贷前风控内容介绍" class="headerlink" title="1.1.贷前风控内容介绍"></a>1.1.贷前风控内容介绍</h2><p>贷前风控的主要内容是对新用户进行全方位的风险评估，判断是否给予客户授信以及授信的额度、利率、期限以及还款方式，统称准入策略和授信策略。</p>
-<h2 id="1-2-贷前风控流程图"><a href="#1-2-贷前风控流程图" class="headerlink" title="1.2.贷前风控流程图"></a>1.2.贷前风控流程图</h2><p>注重流程的全面性<br>用户在操作各项进件流程完整进件后，用户的申请订单推送到风控系统，策略的决策由风控的决策引擎实现(风控决策引擎相关介绍)。<br>整个流程中由各个节点串联，包含反欺诈节点、准入节点、征信节点等。<br>节点的串联关系由各项数据源的成本以及收益综合形成。</p>
-<h1 id="2-贷前准入策略"><a href="#2-贷前准入策略" class="headerlink" title="2.贷前准入策略"></a>2.贷前准入策略</h1><p>这里贷前准入策略是所有规则的集合，包括反欺诈规则、准入规则、信用类规则以及其他征信类规则。</p>
-<h2 id="2-1-反欺诈规则"><a href="#2-1-反欺诈规则" class="headerlink" title="2.1.反欺诈规则"></a>2.1.反欺诈规则</h2><p>主要的防控核查对象为客户本人信息和关联人信息。<br>核查要素包括身份证、手机号、地址、邮箱、GPS、通讯录等等。<br>核查内容包括命中黑名单、灰名单情况、共用信息情况、批量操作情况<br>关系网络应用</p>
-<h2 id="2-2-准入类规则"><a href="#2-2-准入类规则" class="headerlink" title="2.2.准入类规则"></a>2.2.准入类规则</h2><p>基本信息类政策性<br>年龄(政策&amp;风险)、各项地址(通讯触达&amp;风险)、职业判断(学生)、行业等</p>
-<h2 id="2-3-信用类规则"><a href="#2-3-信用类规则" class="headerlink" title="2.3.信用类规则"></a>2.3.信用类规则</h2><p>分数据模块的信用判断<br>设备信息(applist\msg)<br>历史还款信息  </p>
-<h2 id="2-4-征信类规则"><a href="#2-4-征信类规则" class="headerlink" title="2.4.征信类规则"></a>2.4.征信类规则</h2><p>征信中心信息(人行征信、百行征信、互金协会)，覆盖面全、信息完善<br>其他三方数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">欺诈风险和信用风险</span><br></pre></td></tr></table></figure>
+<h2 id="1-2-贷前风控流程图"><a href="#1-2-贷前风控流程图" class="headerlink" title="1.2.贷前风控流程图"></a>1.2.贷前风控流程图</h2><p>注重流程的全面性<br>用户在操作各项进件流程完整进件后，用户的申请订单推送到风控系统，策略的决策由风控的决策引擎实现(风控决策引擎相关介绍)。<br>整个 流程中由各个节点串联，包含反欺诈节点、准入节点、征信节点等。<br>节点的串联关系由各项数据源的成本以及收益综合形成。</p>
+<h1 id="2-贷前风控策略"><a href="#2-贷前风控策略" class="headerlink" title="2.贷前风控策略"></a>2.贷前风控策略</h1><p>这里贷前风控策略是所有规则的集合，可分为反欺诈规则和信用类规则。<br>信用类规则可细分为准入规则、核验类规则、行为类规则、征信类规则。</p>
+<h2 id="2-1-反欺诈规则"><a href="#2-1-反欺诈规则" class="headerlink" title="2.1.反欺诈规则"></a>2.1.反欺诈规则</h2><p>主要的防控核查对象为客户本人信息和关联人信息。为内部数据<br>核查要素包括身份证、手机号、地址、邮箱、GPS、通讯录等等。<br>核查内容包括命中黑名单、灰名单情况、共用信息情况、批量操作情况<br>关系网络应用</p>
+<h2 id="2-2-准入规则"><a href="#2-2-准入规则" class="headerlink" title="2.2.准入规则"></a>2.2.准入规则</h2><p>基本信息类政策性<br>年龄(政策&amp;风险)、各项地址(通讯触达&amp;风险)、职业判断(学生)、行业等</p>
+<h2 id="2-3-行为类规则"><a href="#2-3-行为类规则" class="headerlink" title="2.3.行为类规则"></a>2.3.行为类规则</h2><p>主要是用户在本平台授权、操作产生的各项设备信息、申请行为、还款行为 </p>
+<h2 id="2-4-征信类规则"><a href="#2-4-征信类规则" class="headerlink" title="2.4.征信类规则"></a>2.4.征信类规则</h2><p>征信中心信息(人行征信、百行征信、互金协会)，覆盖面全、信息完善<br>其他三方数据(数据源丰富)</p>
 <h2 id="2-5-核验类规则"><a href="#2-5-核验类规则" class="headerlink" title="2.5.核验类规则"></a>2.5.核验类规则</h2><p>运营商核查(入网时长、实名)<br>联系人核查(在网状态、实名)</p>
 <h2 id="2-6-模型应用"><a href="#2-6-模型应用" class="headerlink" title="2.6.模型应用"></a>2.6.模型应用</h2><p>2）策略和模型的应用：这里会引出一个老生常谈的问题，模型和策略怎么去区分，同样都是以反欺诈为目的，到底哪些指标放在模型里，哪些放在策略里。一般来讲，有较强的区分度或高iv的指标，多数放在策略里应用，而单指标不足以进行好坏判断，但可以通过权重来组合判断的，则可以考虑放在模型中，例如多头类指标。当然模型和策略之间也并非完全独立，模型的结果需要通过策略来应用，例如cutoff值，而策略的权重应用与模型也有相似之处。</p>
 <p>申请评分卡，也就是我们常说的A卡，是应用最广泛的评分模型，对于整个开发的过程这里就不赘述了，需要强调的是关于内外部数据的应用。众所周知，线上贷款更多的会应用到外部数据，内外部数据如何应用在模型中，就是在流程设计时应该考虑的问题，如果从A卡效果出发，所有数据打通使用，所有指标合并训练，从模型效果来讲是最优的，但当外部数据需要替换时往往需要对整个模型做调整，所以另一种方案是内外部数据分别做两张评分卡，或者外部数据评分卡在因内部数据不足造成评分过低时用以补充，其最大的优势是两张评分卡独立，确保内部数据评分模型不受影响。</p>
 <p>相信大部分的产品在通过A卡和准入策略之后，就可以进行授信了，但从某些角度来看，整个授信准入只考虑了风险的问题，即把坏客户排除在外，但是在需要综合考量产品利润时，比如最常见的信用卡业务，不仅仅要关注风险，还需要关注潜在的收益，即便客户通过了风险准入关，但是站在将来获取收益的维度来看，是入不敷出的，所以在准入时，可在风险评估之后再加入收益评估，进行组合判断。</p>
 <h1 id="3-贷前额度策略"><a href="#3-贷前额度策略" class="headerlink" title="3.贷前额度策略"></a>3.贷前额度策略</h1><p>额度：根据客户负债、收入以及风险状况综合评估<br>利率：风险定价，高风险高利率，同时考虑利率敏感性尽量提升利率<br>期限：提供多种期限供选择，优质用户可选范围多，需要结合用户月供、负债、收入等综合考虑用户的偿还能力<br>还款方式：等额本息、先息后本，谨慎开放先息后本，限制特定客群或场景<br>在通过所有的准入之后，就到了定额和定价的环节。额度的制定有简单粗暴按照收入倍数来确定的，也有根据结合收入偿债比来制定的，有按照征信信息中信用卡额度来作参考的，也有根据渠道方要求直接确定的，无论何种方式，都可以再叠加评分等级进行二维交叉。总的来说，收入、负债、风险、外部因素都是在定额中绕不开的参考因素。定价环节就更为复杂一些，从风险定价、到考虑风险、收益、资本的RAROC定价、再到考虑市场行动响应的定价模式，当然前提是能够对产品的定价占据一定的主导权，不然所有的定价都不如市场定价来的有效。</p>
-<h1 id="4-客户分层策略"><a href="#4-客户分层策略" class="headerlink" title="4.客户分层策略"></a>4.客户分层策略</h1><p>对不同的产品甚至不同的客户进行交叉分层。在线上贷款开展的初期，由于数据沉淀不足，一套风控流程是最常见的做法，但随着产品的多元化以及数据积累的程度，对于单产品甚至是不同客群都有着单独搭建风控模型或策略的条件，这也能使得数据的应用更有针对性以及量化风控的结果更为精准。</p>
+<h1 id="4-客户分群策略"><a href="#4-客户分群策略" class="headerlink" title="4.客户分群策略"></a>4.客户分群策略</h1><p>对不同的产品甚至不同的客户进行交叉分层。在线上贷款开展的初期，由于数据沉淀不足，一套风控流程是最常见的做法，但随着产品的多元化以及数据积累的程度，对于单产品甚至是不同客群都有着单独搭建风控模型或策略的条件，这也能使得数据的应用更有针对性以及量化风控的结果更为精准。</p>
 <h1 id="5-贷前捞回策略"><a href="#5-贷前捞回策略" class="headerlink" title="5.贷前捞回策略"></a>5.贷前捞回策略</h1><p>[<a href="https://zhuanlan.zhihu.com/p/139100161]" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/139100161]</a></p>
 <h1 id="6-常见问题点"><a href="#6-常见问题点" class="headerlink" title="6.常见问题点"></a>6.常见问题点</h1><h2 id="6-1-如何做好数据成本和风控效果之间的平衡？"><a href="#6-1-如何做好数据成本和风控效果之间的平衡？" class="headerlink" title="6.1.如何做好数据成本和风控效果之间的平衡？"></a>6.1.如何做好数据成本和风控效果之间的平衡？</h2><p>从理论上来说，外部数据应用的越多，主观上风控的信心就越足，至于是否真的有效，那还得用数据来说话。在讨论这个问题之前，我们先假设介入的数据都具备一定的有效性。外部数据的应用主要有两大类方式，即串行和并行。所谓串行就是所有的外部数据调用按照固定的流程进行调用，例如先走行内黑名单、再走反欺诈多头判断、再调人行征信等等，只要触发了准入规则，则流程中断，后续数据不再调用；而并行是指不管三七二十一，在客户完成所有授权并发起业务时，把所有的能调用的外部数据全部调用一遍，即便客户最终无法通过，但是所有的数据都已经积累了，对于后续的数据应用、模型策略调优、拒绝回捞甚至是可能的交叉销售，都带来了一定的机会。这两类方式的优缺点显而易见，串行模式兼顾了成本和效率，但是数据积累上不足，而并行模式则为了积累更多的数据而为一个无法准入的客户承担了更多的数据成本。在曾经为一家互金公司做项目时，客户提出了单笔成本的要求，也就是说数据成本除了要覆盖放贷客群，未放贷客群的成本也必须考虑纳入，通过率过低则会直接影响到单笔放贷的成本。所以究竟选择哪种方案，取决于各机构的实际情况以及对数据的渴望程度。</p>
 <h2 id="6-2-如何确保基于外部数据源的风险模型的稳定性？"><a href="#6-2-如何确保基于外部数据源的风险模型的稳定性？" class="headerlink" title="6.2.如何确保基于外部数据源的风险模型的稳定性？"></a>6.2.如何确保基于外部数据源的风险模型的稳定性？</h2><p>模型最常见的稳定性检验指标是PSI，体现的是测试样本或者生产数据与开发样本评分的分布差异。模型的稳定性可能受到客群变化的影响，也可能受到市场变化的影响，当然也会有建模数据源变动带来的影响。外部数据源如果发生了变化，包括中断、波动、甚至是新数据源的增加，都可能影响原模型的稳定性，能够采取的措施主要有以下几点：一是在入模之前，优先对各指标线的稳定性进行评估；二是做好备用数据源的准备；三是基于模型的开发周期普遍长于策略，部分数据可以在策略端进行应用，而阈值的调整更有利于业务的理解；四是随时做好监控和调优准备，毕竟线上贷款的调优频率比传统线下贷款要更高。</p>
@@ -665,7 +670,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -687,7 +692,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -766,7 +771,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-简介"><span class="nav-text">1.简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-贷前风控内容介绍"><span class="nav-text">1.1.贷前风控内容介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-贷前风控流程图"><span class="nav-text">1.2.贷前风控流程图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-贷前准入策略"><span class="nav-text">2.贷前准入策略</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-反欺诈规则"><span class="nav-text">2.1.反欺诈规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-准入类规则"><span class="nav-text">2.2.准入类规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-信用类规则"><span class="nav-text">2.3.信用类规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-征信类规则"><span class="nav-text">2.4.征信类规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-核验类规则"><span class="nav-text">2.5.核验类规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-模型应用"><span class="nav-text">2.6.模型应用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-贷前额度策略"><span class="nav-text">3.贷前额度策略</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-客户分层策略"><span class="nav-text">4.客户分层策略</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-贷前捞回策略"><span class="nav-text">5.贷前捞回策略</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-常见问题点"><span class="nav-text">6.常见问题点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-如何做好数据成本和风控效果之间的平衡？"><span class="nav-text">6.1.如何做好数据成本和风控效果之间的平衡？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-如何确保基于外部数据源的风险模型的稳定性？"><span class="nav-text">6.2.如何确保基于外部数据源的风险模型的稳定性？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-拒绝回捞是指从拒绝的客户中再来选择满足一定条件的客户，既然这样，为什么不对模型进行重新迭代呢？"><span class="nav-text">6.3.拒绝回捞是指从拒绝的客户中再来选择满足一定条件的客户，既然这样，为什么不对模型进行重新迭代呢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-线上贷款的拒绝原因，要不要展现给客户？"><span class="nav-text">6.4.线上贷款的拒绝原因，要不要展现给客户？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-5-线上贷款的准入策略被个案所挑战时如何应对？"><span class="nav-text">6.5.线上贷款的准入策略被个案所挑战时如何应对？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-6-线上贷款一旦出了风险，到底是谁的责任？"><span class="nav-text">6.6.线上贷款一旦出了风险，到底是谁的责任？</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-简介"><span class="nav-text">1.简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-贷前风控内容介绍"><span class="nav-text">1.1.贷前风控内容介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-贷前风控流程图"><span class="nav-text">1.2.贷前风控流程图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-贷前风控策略"><span class="nav-text">2.贷前风控策略</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-反欺诈规则"><span class="nav-text">2.1.反欺诈规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-准入规则"><span class="nav-text">2.2.准入规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-行为类规则"><span class="nav-text">2.3.行为类规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-征信类规则"><span class="nav-text">2.4.征信类规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-核验类规则"><span class="nav-text">2.5.核验类规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-模型应用"><span class="nav-text">2.6.模型应用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-贷前额度策略"><span class="nav-text">3.贷前额度策略</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-客户分群策略"><span class="nav-text">4.客户分群策略</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-贷前捞回策略"><span class="nav-text">5.贷前捞回策略</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-常见问题点"><span class="nav-text">6.常见问题点</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-如何做好数据成本和风控效果之间的平衡？"><span class="nav-text">6.1.如何做好数据成本和风控效果之间的平衡？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-如何确保基于外部数据源的风险模型的稳定性？"><span class="nav-text">6.2.如何确保基于外部数据源的风险模型的稳定性？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-拒绝回捞是指从拒绝的客户中再来选择满足一定条件的客户，既然这样，为什么不对模型进行重新迭代呢？"><span class="nav-text">6.3.拒绝回捞是指从拒绝的客户中再来选择满足一定条件的客户，既然这样，为什么不对模型进行重新迭代呢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-线上贷款的拒绝原因，要不要展现给客户？"><span class="nav-text">6.4.线上贷款的拒绝原因，要不要展现给客户？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-5-线上贷款的准入策略被个案所挑战时如何应对？"><span class="nav-text">6.5.线上贷款的准入策略被个案所挑战时如何应对？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-6-线上贷款一旦出了风险，到底是谁的责任？"><span class="nav-text">6.6.线上贷款一旦出了风险，到底是谁的责任？</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -797,7 +802,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共8k字</span>
+  <span class="post-count">博客全站共9.5k字</span>
 </div>
 </div>
 
