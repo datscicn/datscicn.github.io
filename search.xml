@@ -113,7 +113,9 @@
 <li>public、static用来修饰方法，这里表示它是一个公开的静态方法</li>
 </ul>
 <h2 id="2-2-如何运行Java程序"><a href="#2-2-如何运行Java程序" class="headerlink" title="2.2.如何运行Java程序"></a>2.2.如何运行Java程序</h2><p>Java源码本质上是一个文本文件，我们需要先用javac把Hello.java编译成字节码文件Hello.class，然后，用java命令执行这个class字节码文件：<br>第一步，在保存Hello.java的目录下执行命令<code>javac Hello.java</code>，生成<code>Hello.class</code>文件<br>第二步，执行Hello.class，使用命令<code>java Hello</code>，运行结束。<br>或者，可直接运行<code>java Hello.java</code>。  </p>
-<h2 id="2-3-IDE的使用"><a href="#2-3-IDE的使用" class="headerlink" title="2.3.IDE的使用"></a>2.3.IDE的使用</h2><p>1.安装Eclipse<br>Eclipse的发行版提供了预打包的开发环境，包括Java、JavaEE、C++、PHP、Rust等。<br>我们需要下载的版本是Eclipse IDE for Java Developers<br><img src="/2020/07/01/yi-qi-xue-java-001-java-ji-ben-jie-shao/tu1.png" alt="logo"><br>2.新建项目HelloWorld，不勾选“Create module-info.java file”<br>3.新建Java文件并运行<br>展开HelloWorld工程，选中源码目录src，点击右键，在弹出菜单中选择“New”-“Class”：<br>自动在src目录下创建了一个名为Hello.java的源文件<br>选中文件Hello.java，点击右键，在弹出的菜单中选中“Run As…”-“Java Application”：</p>
+<h2 id="2-3-IDE的使用"><a href="#2-3-IDE的使用" class="headerlink" title="2.3.IDE的使用"></a>2.3.IDE的使用</h2><p>1.安装Eclipse<br>Eclipse的发行版提供了预打包的开发环境，包括Java、JavaEE、C++、PHP、Rust等。<br>我们需要下载的版本是Eclipse IDE for Java Developers  </p>
+<p><img src="/2020/07/01/yi-qi-xue-java-001-java-ji-ben-jie-shao/tu1.png" alt="logo"></p>
+<p>2.新建项目HelloWorld，不勾选“Create module-info.java file”<br>3.新建Java文件并运行<br>展开HelloWorld工程，选中源码目录src，点击右键，在弹出菜单中选择“New”-“Class”：<br>自动在src目录下创建了一个名为Hello.java的源文件<br>选中文件Hello.java，点击右键，在弹出的菜单中选中“Run As…”-“Java Application”：</p>
 ]]></content>
       <categories>
         <category>编程基础</category>
@@ -121,20 +123,6 @@
       <tags>
         <tag>语法</tag>
         <tag>IDE</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>文章模板</title>
-    <url>/2020/04/10/wen-zhang-mo-ban/</url>
-    <content><![CDATA[<p><img src="/2020/04/10/wen-zhang-mo-ban/q.jpg" alt></p>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-      <tags>
-        <tag>标签1</tag>
-        <tag>标签2</tag>
       </tags>
   </entry>
   <entry>
@@ -199,6 +187,56 @@
       </categories>
       <tags>
         <tag>报表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文章模板</title>
+    <url>/2020/04/10/wen-zhang-mo-ban/</url>
+    <content><![CDATA[<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<p><img src="/2020/04/10/wen-zhang-mo-ban/q.jpg" alt></p>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>标签1</tag>
+        <tag>标签2</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>目录大全|编程基础</title>
+    <url>/2020/07/15/mu-lu-da-quan-bian-cheng-ji-chu/</url>
+    <content><![CDATA[<p>编程基础相关目录汇总</p>
+<a id="more"></a>
+
+<blockquote>
+<p>一起学Java系列</p>
+</blockquote>
+<ul>
+<li>001.Java基本介绍</li>
+<li>002.Java语法基础</li>
+</ul>
+<blockquote>
+<p>一起学Python系列</p>
+</blockquote>
+<ul>
+<li>001.</li>
+<li>002.</li>
+</ul>
+<blockquote>
+<p>精品项目</p>
+</blockquote>
+<ul>
+<li>评分卡系列</li>
+<li>任务调度系统</li>
+<li>报表系统</li>
+</ul>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>目录</tag>
       </tags>
   </entry>
   <entry>
@@ -268,39 +306,18 @@
       </tags>
   </entry>
   <entry>
-    <title>目录大全|编程基础</title>
-    <url>/2020/07/15/mu-lu-da-quan-bian-cheng-ji-chu/</url>
-    <content><![CDATA[<p>编程基础相关目录汇总</p>
-<a id="more"></a>
-
-<blockquote>
-<p>一起学Java系列</p>
-</blockquote>
-<ul>
-<li>001.Java基本介绍</li>
-<li>002.Java语法基础</li>
+    <title>风控模型篇|002.行为评分卡开发</title>
+    <url>/2020/07/17/feng-kong-mo-xing-pian-002-xing-wei-ping-fen-qia-kai-fa/</url>
+    <content><![CDATA[<a id="more"></a>
+<h1 id="目标变量定义"><a href="#目标变量定义" class="headerlink" title="目标变量定义"></a>目标变量定义</h1><h1 id="样本选择"><a href="#样本选择" class="headerlink" title="样本选择"></a>样本选择</h1><ul>
+<li>严重逾期用户 </li>
 </ul>
-<blockquote>
-<p>一起学Python系列</p>
-</blockquote>
-<ul>
-<li>001.</li>
-<li>002.</li>
-</ul>
-<blockquote>
-<p>精品项目</p>
-</blockquote>
-<ul>
-<li>评分卡系列</li>
-<li>任务调度系统</li>
-<li>报表系统</li>
-</ul>
-]]></content>
+<h1 id="数据源"><a href="#数据源" class="headerlink" title="数据源"></a>数据源</h1>]]></content>
       <categories>
-        <category>其他</category>
+        <category>金融科技</category>
       </categories>
       <tags>
-        <tag>目录</tag>
+        <tag>模型</tag>
       </tags>
   </entry>
   <entry>
@@ -350,6 +367,12 @@
 <li><a href="https://datscicn.gitee.io/2020/07/17/feng-kong-mo-xing-pian-003-cui-shou-ping-fen-qia-kai-fa/" target="_blank" rel="noopener">003.催收评分卡开发</a></li>
 <li><a href="https://datscicn.gitee.io/2020/07/17/feng-kong-mo-xing-pian-004-ju-jue-tui-duan/" target="_blank" rel="noopener">004.拒绝推断</a></li>
 <li><a href="https://datscicn.gitee.io/2020/07/17/feng-kong-mo-xing-pian-005-feng-kong-mo-xing-zhi-biao/" target="_blank" rel="noopener">005.风控模型指标</a>  </li>
+<li>[特征工程]</li>
+<li>[模型监控]</li>
+</ul>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/56474197" target="_blank" rel="noopener">风控模型师面试准备–业务+模型篇</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/56175215" target="_blank" rel="noopener">风控模型师面试准备–技术篇</a></li>
 <li>建模过程简介</li>
 <li><a href="https://zhuanlan.zhihu.com/p/144666372" target="_blank" rel="noopener">风控模型目标变量定义全接触（A/B/C/F卡）</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/88624987" target="_blank" rel="noopener">风控建模中的样本偏差与拒绝推断</a></li>
@@ -428,6 +451,18 @@
       </tags>
   </entry>
   <entry>
+    <title>风控模型篇|001.申请评分卡开发</title>
+    <url>/2020/07/17/feng-kong-mo-xing-pian-001-shen-qing-ping-fen-qia-kai-fa/</url>
+    <content><![CDATA[<a id="more"></a>
+<h1 id="目标变量定义"><a href="#目标变量定义" class="headerlink" title="目标变量定义"></a>目标变量定义</h1><h1 id="样本选择"><a href="#样本选择" class="headerlink" title="样本选择"></a>样本选择</h1><h1 id="数据源"><a href="#数据源" class="headerlink" title="数据源"></a>数据源</h1>]]></content>
+      <categories>
+        <category>金融科技</category>
+      </categories>
+      <tags>
+        <tag>模型</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>风控数据篇|001.数据介绍总览</title>
     <url>/2020/07/17/feng-kong-shu-ju-pian-001-shu-ju-jie-shao-zong-lan/</url>
     <content><![CDATA[<a id="more"></a>
@@ -443,34 +478,31 @@
   <entry>
     <title>风控模型篇|000.风险建模流程</title>
     <url>/2020/07/30/feng-kong-mo-xing-pian-000-feng-xian-jian-mo-liu-cheng/</url>
-    <content><![CDATA[<a id="more"></a>]]></content>
-      <categories>
-        <category>金融科技</category>
-      </categories>
-      <tags>
-        <tag>模型</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>风控模型篇|001.申请评分卡开发</title>
-    <url>/2020/07/17/feng-kong-mo-xing-pian-001-shen-qing-ping-fen-qia-kai-fa/</url>
     <content><![CDATA[<a id="more"></a>
-<h1 id="目标变量定义"><a href="#目标变量定义" class="headerlink" title="目标变量定义"></a>目标变量定义</h1><h1 id="样本选择"><a href="#样本选择" class="headerlink" title="样本选择"></a>样本选择</h1><h1 id="数据源"><a href="#数据源" class="headerlink" title="数据源"></a>数据源</h1>]]></content>
-      <categories>
-        <category>金融科技</category>
-      </categories>
-      <tags>
-        <tag>模型</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>风控模型篇|002.行为评分卡开发</title>
-    <url>/2020/07/17/feng-kong-mo-xing-pian-002-xing-wei-ping-fen-qia-kai-fa/</url>
-    <content><![CDATA[<a id="more"></a>
-<h1 id="目标变量定义"><a href="#目标变量定义" class="headerlink" title="目标变量定义"></a>目标变量定义</h1><h1 id="样本选择"><a href="#样本选择" class="headerlink" title="样本选择"></a>样本选择</h1><ul>
-<li>严重逾期用户 </li>
+
+<p>第一章 信用评分基础认识与应用 /001<br>第一节 信用评分卡简介 /003<br>第二节 评分卡建立与验证 /008<br>第三节 评分应用 /026</p>
+<h1 id="1-模型基础认识"><a href="#1-模型基础认识" class="headerlink" title="1.模型基础认识"></a>1.模型基础认识</h1><p>要素：S-X-f(x)-Y</p>
+<ul>
+<li><p>S为P产品到表现期(10天)的样本集合</p>
+</li>
+<li><p>X为人行征信衍生变量</p>
+</li>
+<li><p>Y为人维度的ever10+</p>
+</li>
+<li><p>f是基于逻辑回归的信用评分模型</p>
+</li>
 </ul>
-<h1 id="数据源"><a href="#数据源" class="headerlink" title="数据源"></a>数据源</h1>]]></content>
+<p>目标：</p>
+<ol>
+<li><h1 id="2-样本处理"><a href="#2-样本处理" class="headerlink" title="2.样本处理"></a>2.样本处理</h1></li>
+</ol>
+<h2 id="2-1-样本选取与划分"><a href="#2-1-样本选取与划分" class="headerlink" title="2.1.样本选取与划分"></a>2.1.样本选取与划分</h2><p>表现期、<br>样本排除<br>不同场景</p>
+<h2 id="2-2-建模目标变量确定"><a href="#2-2-建模目标变量确定" class="headerlink" title="2.2.建模目标变量确定"></a>2.2.建模目标变量确定</h2><p>滚动率</p>
+<h1 id="3-特征工程"><a href="#3-特征工程" class="headerlink" title="3.特征工程"></a>3.特征工程</h1><h2 id="3-1-数据收集"><a href="#3-1-数据收集" class="headerlink" title="3.1.数据收集"></a>3.1.数据收集</h2><h2 id="3-2-特征处理"><a href="#3-2-特征处理" class="headerlink" title="3.2.特征处理"></a>3.2.特征处理</h2><h1 id="4-自变量分析"><a href="#4-自变量分析" class="headerlink" title="4.自变量分析"></a>4.自变量分析</h1><h2 id="4-1-变量描述性"><a href="#4-1-变量描述性" class="headerlink" title="4.1.变量描述性"></a>4.1.变量描述性</h2><p>Pandas Profiling提供数据的一个整体报告，是一个帮助我们理解数据的过程。它可以简单快速地对Pandas的数据框数据进行探索性数据分析。</p>
+<h2 id="4-2-变量区分度"><a href="#4-2-变量区分度" class="headerlink" title="4.2.变量区分度"></a>4.2.变量区分度</h2><p>细致分类</p>
+<h2 id="4-3-变量稳定性"><a href="#4-3-变量稳定性" class="headerlink" title="4.3.变量稳定性"></a>4.3.变量稳定性</h2><p>分布稳定性、效果稳定性、趋势稳定性</p>
+<h2 id="4-4-变量的相关性"><a href="#4-4-变量的相关性" class="headerlink" title="4.4.变量的相关性"></a>4.4.变量的相关性</h2><h1 id="5-具体建模"><a href="#5-具体建模" class="headerlink" title="5.具体建模"></a>5.具体建模</h1><p>变量筛选、参数调整</p>
+<h1 id="6-模型验证"><a href="#6-模型验证" class="headerlink" title="6.模型验证"></a>6.模型验证</h1><h1 id="7-拒绝推断"><a href="#7-拒绝推断" class="headerlink" title="7.拒绝推断"></a>7.拒绝推断</h1><h1 id="8-模型应用"><a href="#8-模型应用" class="headerlink" title="8.模型应用"></a>8.模型应用</h1><h1 id="9-模型的监控"><a href="#9-模型的监控" class="headerlink" title="9.模型的监控"></a>9.模型的监控</h1>]]></content>
       <categories>
         <category>金融科技</category>
       </categories>
@@ -502,57 +534,6 @@
       </tags>
   </entry>
   <entry>
-    <title>风控模型篇|005.风控模型指标</title>
-    <url>/2020/07/17/feng-kong-mo-xing-pian-005-feng-kong-mo-xing-zhi-biao/</url>
-    <content><![CDATA[<a id="more"></a>]]></content>
-      <categories>
-        <category>金融科技</category>
-      </categories>
-      <tags>
-        <tag>模型</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>风控策略篇|002.贷中风控策略框架</title>
-    <url>/2020/07/16/feng-kong-ce-lue-pian-002-dai-zhong-feng-kong-ce-lue-kuang-jia/</url>
-    <content><![CDATA[<a id="more"></a>
-<h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h1><h2 id="1-1-贷中风控内容介绍"><a href="#1-1-贷中风控内容介绍" class="headerlink" title="1.1.贷中风控内容介绍"></a>1.1.贷中风控内容介绍</h2><p>贷中风控的主要内容是对老用户(历史授信成功用户)在贷款支用、授信结果调整等环节进行全方位的风险评估，判断用户额度范围内支用是否批核以及定期或不定期地对予客户授信的额度、利率、期限以及还款方式进行，统称准入策略和授信策略。</p>
-<h2 id="1-2-贷中风控流程图"><a href="#1-2-贷中风控流程图" class="headerlink" title="1.2.贷中风控流程图"></a>1.2.贷中风控流程图</h2><p>注重流程的全面性<br>用户在操作各项进件流程完整进件后，用户的申请订单推送到风控系统，策略的决策由风控的决策引擎实现(风控决策引擎相关介绍)。<br>整个流程中由各个节点串联，包含反欺诈节点、准入节点、征信节点等。<br>节点的串联关系由各项数据源的成本以及收益综合形成。</p>
-]]></content>
-      <categories>
-        <category>金融科技</category>
-      </categories>
-      <tags>
-        <tag>贷中</tag>
-        <tag>策略</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>风控策略篇|003.贷前反欺诈规则</title>
-    <url>/2020/07/17/feng-kong-ce-lue-pian-003-dai-qian-fan-qi-zha-gui-ze/</url>
-    <content><![CDATA[<a id="more"></a>
-<h1 id="1-欺诈风险简介"><a href="#1-欺诈风险简介" class="headerlink" title="1.欺诈风险简介"></a>1.欺诈风险简介</h1><h1 id="1-1-欺诈风险分类"><a href="#1-1-欺诈风险分类" class="headerlink" title="1.1.欺诈风险分类"></a>1.1.欺诈风险分类</h1><p>从作案规模上，信贷反欺诈一般可分为个人欺诈和团队欺诈。<br>个人欺诈重点核查个人及联系人信息，包括：</p>
-<ul>
-<li>黑户风险：借款人及联系人各项信息命中黑名单。包括内部黑名单(逾期严重用户、恶意投诉用户等)、外部外部黑名单（征信&amp;三方数据）；</li>
-<li>恶意欺诈：借款人通过伪造资料、伪造设备等造假行为蓄意骗贷，重点核查用户资料真实性和设备信息；</li>
-<li>身份冒用：伪冒他人身份进行欺诈骗贷。包括熟人冒用（亲戚朋友、同学等）和他人盗用（购买他人四件套、个人隐私信息泄漏等）。一般可通过信审、人脸识别、活体验证等方式来核验借款人身份。需对人脸识别等活体信息进行检测识别；</li>
-<li>中介风险：黑中介哄骗或招揽客户实施骗贷。网贷中介有利有弊，好中介可帮助平台导流（类似贷款超市），提高市场份额；黑中介将对平台风控漏洞进行大规模攻击，造成巨大资损。黑中介可利用白户轻松突破风控防线，并骗取白户的高额手续费。黑中介通讯录一般会存客户的号码；若是远程贷款操作，可能会采取视频通话、翻拍照片来应对活体识别核身；  </li>
-</ul>
-<p>团队欺诈重点核查所有信息之间的关联性，包括：</p>
-<ul>
-<li>地理位置：同一区域申请集中性及历史批核情况</li>
-<li>信息共用：联系人、单位、居住地、设备等</li>
-</ul>
-]]></content>
-      <categories>
-        <category>金融科技</category>
-      </categories>
-      <tags>
-        <tag>贷前</tag>
-        <tag>反欺诈</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>风控策略篇|001.贷前风控策略框架</title>
     <url>/2020/07/15/feng-kong-ce-lue-pian-001-dai-qian-feng-kong-ce-lue-kuang-jia/</url>
     <content><![CDATA[<a id="more"></a>
@@ -562,7 +543,6 @@
 <p>风控策略，则是金融机构追求利润最大化的强大武器。</p>
 <p>风控策略，广义上是代表一种风险管理战略思想，狭义上讲，是一个个数据规则组合而成的风险管理架构。作者希望通过此长文，为FAL读者朋友们一次性解释风控策略体系。</p>
 <h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h1><h2 id="1-1-贷前风控内容介绍"><a href="#1-1-贷前风控内容介绍" class="headerlink" title="1.1.贷前风控内容介绍"></a>1.1.贷前风控内容介绍</h2><p>贷前风控的主要内容是对新用户进行全方位的风险评估，判断是否给予客户授信以及授信的额度、利率、期限以及还款方式，统称准入策略和授信策略。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">欺诈风险和信用风险</span><br></pre></td></tr></table></figure>
 <h2 id="1-2-贷前风控流程图"><a href="#1-2-贷前风控流程图" class="headerlink" title="1.2.贷前风控流程图"></a>1.2.贷前风控流程图</h2><p>注重流程的全面性<br>用户在操作各项进件流程完整进件后，用户的申请订单推送到风控系统，策略的决策由风控的决策引擎实现(风控决策引擎相关介绍)。<br>整个 流程中由各个节点串联，包含反欺诈节点、准入节点、征信节点等。<br>节点的串联关系由各项数据源的成本以及收益综合形成。政策性的需要</p>
 <h1 id="2-贷前准入策略"><a href="#2-贷前准入策略" class="headerlink" title="2.贷前准入策略"></a>2.贷前准入策略</h1><p>这里贷前准入策略是所有规则的集合，可分为反欺诈规则和信用类规则。<br>信用类规则可细分为准入规则、核验类规则、行为类规则、征信类规则。</p>
 <h2 id="2-1-反欺诈规则"><a href="#2-1-反欺诈规则" class="headerlink" title="2.1.反欺诈规则"></a>2.1.反欺诈规则</h2><p>主要的防控核查对象为客户本人信息和关联人信息。为内部数据<br>核查要素包括身份证、手机号、地址、邮箱、GPS、通讯录等等。<br>核查内容包括命中黑名单、灰名单情况、共用信息情况、批量操作情况<br>关系网络应用<br>基本信息核实、人工</p>
@@ -573,7 +553,8 @@
 <h2 id="2-6-模型应用"><a href="#2-6-模型应用" class="headerlink" title="2.6.模型应用"></a>2.6.模型应用</h2><p>2）策略和模型的应用：这里会引出一个老生常谈的问题，模型和策略怎么去区分，同样都是以反欺诈为目的，到底哪些指标放在模型里，哪些放在策略里。一般来讲，有较强的区分度或高iv的指标，多数放在策略里应用，而单指标不足以进行好坏判断，但可以通过权重来组合判断的，则可以考虑放在模型中，例如多头类指标。当然模型和策略之间也并非完全独立，模型的结果需要通过策略来应用，例如cutoff值，而策略的权重应用与模型也有相似之处。</p>
 <p>申请评分卡，也就是我们常说的A卡，是应用最广泛的评分模型，对于整个开发的过程这里就不赘述了，需要强调的是关于内外部数据的应用。众所周知，线上贷款更多的会应用到外部数据，内外部数据如何应用在模型中，就是在流程设计时应该考虑的问题，如果从A卡效果出发，所有数据打通使用，所有指标合并训练，从模型效果来讲是最优的，但当外部数据需要替换时往往需要对整个模型做调整，所以另一种方案是内外部数据分别做两张评分卡，或者外部数据评分卡在因内部数据不足造成评分过低时用以补充，其最大的优势是两张评分卡独立，确保内部数据评分模型不受影响。</p>
 <p>相信大部分的产品在通过A卡和准入策略之后，就可以进行授信了，但从某些角度来看，整个授信准入只考虑了风险的问题，即把坏客户排除在外，但是在需要综合考量产品利润时，比如最常见的信用卡业务，不仅仅要关注风险，还需要关注潜在的收益，即便客户通过了风险准入关，但是站在将来获取收益的维度来看，是入不敷出的，所以在准入时，可在风险评估之后再加入收益评估，进行组合判断。</p>
-<h1 id="3-贷前额度策略"><a href="#3-贷前额度策略" class="headerlink" title="3.贷前额度策略"></a>3.贷前额度策略</h1><p>额度：根据客户负债、收入、风险状况、客群属性综合评估<br>利率：风险定价，高风险高利率，同时考虑利率敏感性尽量提升利率<br>期限：提供多种期限供选择，优质用户可选范围多，需要结合用户月供、负债、收入等综合考虑用户的偿还能力<br>还款方式：等额本息、先息后本，谨慎开放先息后本，限制特定客群或场景<br>在通过所有的准入之后，就到了定额和定价的环节。额度的制定有简单粗暴按照收入倍数来确定的，也有根据结合收入偿债比来制定的，有按照征信信息中信用卡额度来作参考的，也有根据渠道方要求直接确定的，无论何种方式，都可以再叠加评分等级进行二维交叉。总的来说，收入、负债、风险、外部因素都是在定额中绕不开的参考因素。定价环节就更为复杂一些，从风险定价、到考虑风险、收益、资本的RAROC定价、再到考虑市场行动响应的定价模式，当然前提是能够对产品的定价占据一定的主导权，不然所有的定价都不如市场定价来的有效。</p>
+<h1 id="3-贷前额度策略"><a href="#3-贷前额度策略" class="headerlink" title="3.贷前额度策略"></a>3.贷前额度策略</h1><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">三维</span><br><span class="line">还款意愿：欺诈风险和信用风险</span><br><span class="line">还款能力：收入核定，控制负债比</span><br><span class="line">资金需求：考虑资产收益</span><br></pre></td></tr></table></figure>
+<p>额度：根据客户负债、收入、风险状况、客群属性综合评估<br>利率：风险定价，高风险高利率，同时考虑利率敏感性尽量提升利率<br>期限：提供多种期限供选择，优质用户可选范围多，需要结合用户月供、负债、收入等综合考虑用户的偿还能力<br>还款方式：等额本息、先息后本，谨慎开放先息后本，限制特定客群或场景<br>在通过所有的准入之后，就到了定额和定价的环节。额度的制定有简单粗暴按照收入倍数来确定的，也有根据结合收入偿债比来制定的，有按照征信信息中信用卡额度来作参考的，也有根据渠道方要求直接确定的，无论何种方式，都可以再叠加评分等级进行二维交叉。总的来说，收入、负债、风险、外部因素都是在定额中绕不开的参考因素。定价环节就更为复杂一些，从风险定价、到考虑风险、收益、资本的RAROC定价、再到考虑市场行动响应的定价模式，当然前提是能够对产品的定价占据一定的主导权，不然所有的定价都不如市场定价来的有效。</p>
 <h1 id="4-客户分群策略"><a href="#4-客户分群策略" class="headerlink" title="4.客户分群策略"></a>4.客户分群策略</h1><p>风险、意愿、抗压<br>对不同的产品甚至不同的客户进行交叉分层。在线上贷款开展的初期，由于数据沉淀不足，一套风控流程是最常见的做法，但随着产品的多元化以及数据积累的程度，对于单产品甚至是不同客群都有着单独搭建风控模型或策略的条件，这也能使得数据的应用更有针对性以及量化风控的结果更为精准。</p>
 <h1 id="5-贷前捞回策略"><a href="#5-贷前捞回策略" class="headerlink" title="5.贷前捞回策略"></a>5.贷前捞回策略</h1><p>[<a href="https://zhuanlan.zhihu.com/p/139100161]" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/139100161]</a></p>
 <h1 id="6-常见问题点"><a href="#6-常见问题点" class="headerlink" title="6.常见问题点"></a>6.常见问题点</h1><h2 id="6-1-如何做好数据成本和风控效果之间的平衡？"><a href="#6-1-如何做好数据成本和风控效果之间的平衡？" class="headerlink" title="6.1.如何做好数据成本和风控效果之间的平衡？"></a>6.1.如何做好数据成本和风控效果之间的平衡？</h2><p>从理论上来说，外部数据应用的越多，主观上风控的信心就越足，至于是否真的有效，那还得用数据来说话。在讨论这个问题之前，我们先假设介入的数据都具备一定的有效性。外部数据的应用主要有两大类方式，即串行和并行。所谓串行就是所有的外部数据调用按照固定的流程进行调用，例如先走行内黑名单、再走反欺诈多头判断、再调人行征信等等，只要触发了准入规则，则流程中断，后续数据不再调用；而并行是指不管三七二十一，在客户完成所有授权并发起业务时，把所有的能调用的外部数据全部调用一遍，即便客户最终无法通过，但是所有的数据都已经积累了，对于后续的数据应用、模型策略调优、拒绝回捞甚至是可能的交叉销售，都带来了一定的机会。这两类方式的优缺点显而易见，串行模式兼顾了成本和效率，但是数据积累上不足，而并行模式则为了积累更多的数据而为一个无法准入的客户承担了更多的数据成本。在曾经为一家互金公司做项目时，客户提出了单笔成本的要求，也就是说数据成本除了要覆盖放贷客群，未放贷客群的成本也必须考虑纳入，通过率过低则会直接影响到单笔放贷的成本。所以究竟选择哪种方案，取决于各机构的实际情况以及对数据的渴望程度。</p>
@@ -589,8 +570,19 @@
         <category>金融科技</category>
       </categories>
       <tags>
-        <tag>策略</tag>
         <tag>贷前</tag>
+        <tag>策略</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>风控模型篇|005.风控模型指标</title>
+    <url>/2020/07/17/feng-kong-mo-xing-pian-005-feng-kong-mo-xing-zhi-biao/</url>
+    <content><![CDATA[<a id="more"></a>]]></content>
+      <categories>
+        <category>金融科技</category>
+      </categories>
+      <tags>
+        <tag>模型</tag>
       </tags>
   </entry>
   <entry>
@@ -631,28 +623,15 @@
       </tags>
   </entry>
   <entry>
-    <title>风控策略篇|006.贷前客户分群策略</title>
-    <url>/2020/07/17/feng-kong-ce-lue-pian-006-dai-qian-ke-hu-fen-qun-ce-lue/</url>
-    <content><![CDATA[<a id="more"></a>
-<h1 id="1-获客渠道"><a href="#1-获客渠道" class="headerlink" title="1.获客渠道"></a>1.获客渠道</h1><p>客户来源，可分内部流量和外部流量。<br>内部:生态体系内的注册用户，具有一定的品牌粘性<br>外部:又可分自然流量和投放流量，自然流量具有先天的高风险性<br>投放流量主要来源贷款超市、信息流(各广告)等，可进一步细分<br>还可进一步区分推荐好友流量</p>
-<h1 id="2-客群分析"><a href="#2-客群分析" class="headerlink" title="2.客群分析"></a>2.客群分析</h1><h2 id="借贷频繁"><a href="#借贷频繁" class="headerlink" title="借贷频繁"></a>借贷频繁</h2><h2 id="信用卡透支严重"><a href="#信用卡透支严重" class="headerlink" title="信用卡透支严重"></a>信用卡透支严重</h2><h2 id="高学历、高收入等高净值人群"><a href="#高学历、高收入等高净值人群" class="headerlink" title="高学历、高收入等高净值人群"></a>高学历、高收入等高净值人群</h2><h2 id="家庭生活稳定型"><a href="#家庭生活稳定型" class="headerlink" title="家庭生活稳定型"></a>家庭生活稳定型</h2><h2 id="行业白户"><a href="#行业白户" class="headerlink" title="行业白户"></a>行业白户</h2>]]></content>
-      <categories>
-        <category>金融科技</category>
-      </categories>
-      <tags>
-        <tag>贷前</tag>
-        <tag>客户分群</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>风控策略篇|005.贷前额度策略</title>
     <url>/2020/07/17/feng-kong-ce-lue-pian-005-dai-qian-e-du-ce-lue/</url>
     <content><![CDATA[<a id="more"></a>
 
-<h1 id="收入评估"><a href="#收入评估" class="headerlink" title="收入评估"></a>收入评估</h1><p>借助用户填写收入信息、三方数据资产评估、手机型号、居住信息、公积金信息等综合评定</p>
-<h1 id="负债评估"><a href="#负债评估" class="headerlink" title="负债评估"></a>负债评估</h1><p>根据征信中账户还款金额评估</p>
-<h1 id="风险终极评定"><a href="#风险终极评定" class="headerlink" title="风险终极评定"></a>风险终极评定</h1><p>综合所有内外部信息，给予最准确的风险评定，需要模型的融合</p>
-<h1 id="特殊人群圈定"><a href="#特殊人群圈定" class="headerlink" title="特殊人群圈定"></a>特殊人群圈定</h1><h2 id="利率"><a href="#利率" class="headerlink" title="利率"></a>利率</h2><p>利率不敏感人群定价最高，即使风险等级偏好</p>
+<h1 id="事项"><a href="#事项" class="headerlink" title="事项"></a>事项</h1><h2 id="收入评估"><a href="#收入评估" class="headerlink" title="收入评估"></a>收入评估</h2><p>借助用户填写收入信息、三方数据资产评估、手机型号、居住信息、公积金信息等综合评定</p>
+<h2 id="负债评估"><a href="#负债评估" class="headerlink" title="负债评估"></a>负债评估</h2><p>根据征信中账户还款金额评估</p>
+<h2 id="风险终极评定"><a href="#风险终极评定" class="headerlink" title="风险终极评定"></a>风险终极评定</h2><p>综合所有内外部信息，给予最准确的风险评定，需要模型的融合</p>
+<h2 id="客户分群"><a href="#客户分群" class="headerlink" title="客户分群"></a>客户分群</h2><h1 id="原则"><a href="#原则" class="headerlink" title="原则"></a>原则</h1><p>特殊人群圈定</p>
+<h2 id="利率"><a href="#利率" class="headerlink" title="利率"></a>利率</h2><p>利率不敏感人群定价最高，即使风险等级偏好</p>
 <h2 id="期限"><a href="#期限" class="headerlink" title="期限"></a>期限</h2><p>测试人群拉短生命周期，结合收益综合评估</p>
 <h2 id="还款方式"><a href="#还款方式" class="headerlink" title="还款方式"></a>还款方式</h2><p>特定优质人群开放</p>
 <h1 id="申请评分模型的使用融合"><a href="#申请评分模型的使用融合" class="headerlink" title="申请评分模型的使用融合"></a>申请评分模型的使用融合</h1>]]></content>
@@ -662,6 +641,86 @@
       <tags>
         <tag>贷前</tag>
         <tag>额度</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>风控策略篇|003.贷前反欺诈规则</title>
+    <url>/2020/07/17/feng-kong-ce-lue-pian-003-dai-qian-fan-qi-zha-gui-ze/</url>
+    <content><![CDATA[<a id="more"></a>
+<h1 id="1-欺诈风险简介"><a href="#1-欺诈风险简介" class="headerlink" title="1.欺诈风险简介"></a>1.欺诈风险简介</h1><h1 id="1-1-欺诈风险分类"><a href="#1-1-欺诈风险分类" class="headerlink" title="1.1.欺诈风险分类"></a>1.1.欺诈风险分类</h1><p>从作案规模上，信贷反欺诈一般可分为个人欺诈和团队欺诈。<br>个人欺诈重点核查个人及联系人信息，包括：</p>
+<ul>
+<li>黑户风险：借款人及联系人各项信息命中黑名单。包括内部黑名单(逾期严重用户、恶意投诉用户等)、外部外部黑名单（征信&amp;三方数据）；</li>
+<li>恶意欺诈：借款人通过伪造资料、伪造设备等造假行为蓄意骗贷，重点核查用户资料真实性和设备信息；</li>
+<li>身份冒用：伪冒他人身份进行欺诈骗贷。包括熟人冒用（亲戚朋友、同学等）和他人盗用（购买他人四件套、个人隐私信息泄漏等）。一般可通过信审、人脸识别、活体验证等方式来核验借款人身份。需对人脸识别等活体信息进行检测识别；</li>
+<li>中介风险：黑中介哄骗或招揽客户实施骗贷。网贷中介有利有弊，好中介可帮助平台导流（类似贷款超市），提高市场份额；黑中介将对平台风控漏洞进行大规模攻击，造成巨大资损。黑中介可利用白户轻松突破风控防线，并骗取白户的高额手续费。黑中介通讯录一般会存客户的号码；若是远程贷款操作，可能会采取视频通话、翻拍照片来应对活体识别核身；  </li>
+</ul>
+<p>团队欺诈重点核查所有信息之间的关联性，包括：</p>
+<ul>
+<li>地理位置：同一区域申请集中性及历史批核情况</li>
+<li>信息共用：联系人、单位、居住地、设备等</li>
+</ul>
+]]></content>
+      <categories>
+        <category>金融科技</category>
+      </categories>
+      <tags>
+        <tag>贷前</tag>
+        <tag>反欺诈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>风控策略篇|008.贷中反欺诈规则</title>
+    <url>/2020/07/17/feng-kong-ce-lue-pian-008-dai-zhong-fan-qi-zha-gui-ze/</url>
+    <content><![CDATA[<a id="more"></a>
+
+<h1 id="使用数据"><a href="#使用数据" class="headerlink" title="使用数据"></a>使用数据</h1><p>筛选部分用户首次填写的信息持续使用<br>关注动态信息的变化<br>着重使用当前信息</p>
+<h1 id="评估用户恶化趋势"><a href="#评估用户恶化趋势" class="headerlink" title="评估用户恶化趋势"></a>评估用户恶化趋势</h1>]]></content>
+      <categories>
+        <category>金融科技</category>
+      </categories>
+      <tags>
+        <tag>反欺诈</tag>
+        <tag>贷中</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>风控策略篇|002.贷中风控策略框架</title>
+    <url>/2020/07/16/feng-kong-ce-lue-pian-002-dai-zhong-feng-kong-ce-lue-kuang-jia/</url>
+    <content><![CDATA[<a id="more"></a>
+<h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h1><h2 id="1-1-贷中风控内容介绍"><a href="#1-1-贷中风控内容介绍" class="headerlink" title="1.1.贷中风控内容介绍"></a>1.1.贷中风控内容介绍</h2><p>贷中风控的主要内容是对老用户(历史授信成功用户)在贷款支用、授信结果调整等环节进行全方位的风险评估，判断用户额度范围内支用是否批核以及定期或不定期地对予客户授信的额度、利率、期限以及还款方式进行，统称准入策略和授信策略。</p>
+<h2 id="1-2-贷中风控流程图"><a href="#1-2-贷中风控流程图" class="headerlink" title="1.2.贷中风控流程图"></a>1.2.贷中风控流程图</h2><p>注重流程的全面性<br>用户在操作各项进件流程完整进件后，用户的申请订单推送到风控系统，策略的决策由风控的决策引擎实现(风控决策引擎相关介绍)。<br>整个流程中由各个节点串联，包含反欺诈节点、准入节点、征信节点等。<br>节点的串联关系由各项数据源的成本以及收益综合形成。</p>
+]]></content>
+      <categories>
+        <category>金融科技</category>
+      </categories>
+      <tags>
+        <tag>策略</tag>
+        <tag>贷中</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>风控策略篇|006.贷前客户分群策略</title>
+    <url>/2020/07/17/feng-kong-ce-lue-pian-006-dai-qian-ke-hu-fen-qun-ce-lue/</url>
+    <content><![CDATA[<p>贷前客户分群策略是对信贷业务本机构新客户进行 授信、准入管理的重要措施，从客户的家庭、资产、借贷等多方面进行考量，达到客群的划分使得各个客群之间在质量、意愿等方面具有明显的差异。<br>本文将从客户来源、分群数据、分群目标、分群指标等多方面进行阐述，并结合实际案例进行演示说明。</p>
+<a id="more"></a>
+
+<h1 id="1-客户来源"><a href="#1-客户来源" class="headerlink" title="1.客户来源"></a>1.客户来源</h1><p>客户来源，可分内部流量和外部流量。<br>内部:生态体系内的注册用户，具有一定的品牌粘性<br>外部:又可分自然流量和投放流量，自然流量具有先天的高风险性<br>投放流量主要来源贷款超市、信息流(各广告)等，可进一步细分<br>还可进一步区分推荐好友流量。</p>
+<h1 id="2-分群数据"><a href="#2-分群数据" class="headerlink" title="2.分群数据"></a>2.分群数据</h1><h2 id="2-1-用户基本信息"><a href="#2-1-用户基本信息" class="headerlink" title="2.1.用户基本信息"></a>2.1.用户基本信息</h2><p>用户的性别、年龄、地域、职业行业、渠道、生态内、<br>婚姻状况、车房信息，数据可能存在作假</p>
+<h2 id="2-2-用户设备信息"><a href="#2-2-用户设备信息" class="headerlink" title="2.2.用户设备信息"></a>2.2.用户设备信息</h2><p>手机型号、出没区域信息、AppList信息(借贷类、教育类)</p>
+<h2 id="2-3-用户征信信息"><a href="#2-3-用户征信信息" class="headerlink" title="2.3.用户征信信息"></a>2.3.用户征信信息</h2><p>人行征信：部分婚姻状况+部分车房信息，信息虽然不全，但是真实性有一定保障<br>人行征信：信贷历史(信用卡、贷款)+申请流水<br>三方征信：多头申请信息</p>
+<h1 id="3-分群目标"><a href="#3-分群目标" class="headerlink" title="3.分群目标"></a>3.分群目标</h1><h2 id="3-1-资金需求"><a href="#3-1-资金需求" class="headerlink" title="3.1.资金需求"></a>3.1.资金需求</h2><p>综合各项信息对用户的资金需求度进行评估，建立模型，目标变量为是否提现<br>包含多头次数多、信用卡透支严重、应用列表、在途贷款多等</p>
+<h2 id="3-2-资产价值"><a href="#3-2-资产价值" class="headerlink" title="3.2.资产价值"></a>3.2.资产价值</h2><p>高学历、高收入等高净值人群</p>
+<h2 id="3-3-生活稳定"><a href="#3-3-生活稳定" class="headerlink" title="3.3.生活稳定"></a>3.3.生活稳定</h2><p>家庭生活稳定型</p>
+<h2 id="3-4-信贷历史"><a href="#3-4-信贷历史" class="headerlink" title="3.4.信贷历史"></a>3.4.信贷历史</h2><p>行业白户、信用卡持卡、贷款历史</p>
+<h1 id="4-分群指标"><a href="#4-分群指标" class="headerlink" title="4.分群指标"></a>4.分群指标</h1><h2 id="4-1-贷款质量衡量"><a href="#4-1-贷款质量衡量" class="headerlink" title="4.1.贷款质量衡量"></a>4.1.贷款质量衡量</h2><p>通过率、入催率、回款率</p>
+<h2 id="4-2-贷款意愿衡量"><a href="#4-2-贷款意愿衡量" class="headerlink" title="4.2.贷款意愿衡量"></a>4.2.贷款意愿衡量</h2><p>提现率</p>
+]]></content>
+      <categories>
+        <category>金融科技</category>
+      </categories>
+      <tags>
+        <tag>贷前</tag>
+        <tag>客户分群</tag>
       </tags>
   </entry>
   <entry>
@@ -708,29 +767,15 @@
 
 <h1 id="客群划分"><a href="#客群划分" class="headerlink" title="客群划分"></a>客群划分</h1><p>以历史授信成功用户为整体，可划分为授信未使用、使用中和结清未使用<br>不同人群调整目的和方向不同，且所依赖数据源有区别</p>
 <h1 id="贷前策略参考调整"><a href="#贷前策略参考调整" class="headerlink" title="贷前策略参考调整"></a>贷前策略参考调整</h1><p>根据贷前策略最新的数据表现和调整方向，譬如某些新规则、新模型的上线，可重新评估，并结合行为评分</p>
-<h1 id="行为评分的使用"><a href="#行为评分的使用" class="headerlink" title="行为评分的使用"></a>行为评分的使用</h1><h1 id="额度调整策略"><a href="#额度调整策略" class="headerlink" title="额度调整策略"></a>额度调整策略</h1><h1 id="利率调整策略"><a href="#利率调整策略" class="headerlink" title="利率调整策略"></a>利率调整策略</h1><p>结合收益情况</p>
+<h1 id="行为评分的使用"><a href="#行为评分的使用" class="headerlink" title="行为评分的使用"></a>行为评分的使用</h1><h2 id="组成信息"><a href="#组成信息" class="headerlink" title="组成信息"></a>组成信息</h2><p>征信、还款信息、三方数据信息、行为数据等</p>
+<h1 id="执行策略"><a href="#执行策略" class="headerlink" title="执行策略"></a>执行策略</h1><h2 id="额度调整策略"><a href="#额度调整策略" class="headerlink" title="额度调整策略"></a>额度调整策略</h2><h2 id="利率调整策略"><a href="#利率调整策略" class="headerlink" title="利率调整策略"></a>利率调整策略</h2><p>结合收益情况</p>
 ]]></content>
       <categories>
         <category>金融科技</category>
       </categories>
       <tags>
-        <tag>贷中</tag>
         <tag>额度</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>风控策略篇|008.贷中反欺诈规则</title>
-    <url>/2020/07/17/feng-kong-ce-lue-pian-008-dai-zhong-fan-qi-zha-gui-ze/</url>
-    <content><![CDATA[<a id="more"></a>
-
-<h1 id="使用数据"><a href="#使用数据" class="headerlink" title="使用数据"></a>使用数据</h1><p>筛选部分用户首次填写的信息持续使用<br>关注动态信息的变化<br>着重使用当前信息</p>
-<h1 id="评估用户恶化趋势"><a href="#评估用户恶化趋势" class="headerlink" title="评估用户恶化趋势"></a>评估用户恶化趋势</h1>]]></content>
-      <categories>
-        <category>金融科技</category>
-      </categories>
-      <tags>
         <tag>贷中</tag>
-        <tag>反欺诈</tag>
       </tags>
   </entry>
 </search>
