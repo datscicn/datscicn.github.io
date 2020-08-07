@@ -79,14 +79,14 @@
 
 
 
-<meta name="description" content="1.简介1.1.贷中风控内容介绍贷中风控的主要内容是对老用户(历史授信成功用户)在贷款支用、授信结果调整等环节进行全方位的风险评估，判断用户额度范围内支用是否批核以及定期或不定期地对予客户授信的额度、利率、期限以及还款方式进行，统称准入策略和授信策略。 1.2.贷中风控流程图注重流程的全面性用户在操作各项进件流程完整进件后，用户的申请订单推送到风控系统，策略的决策由风控的决策引擎实现(风控决策引">
+<meta name="description" content="1.简介1.1.贷中风控内容介绍贷中风控的主要内容是对老用户(历史授信成功用户)在贷款支用、授信结果调整等环节进行全方位的风险评估，判断用户额度范围内支用是否批核，以及定期或不定期地对客户授信的额度、利率、期限以及还款方式进行调整，统称交易策略和授信管理策略。 1.2.贷中风控流程图分为两个环节，授信管理即对费限额进行调整，交易管理即管理用户贷款的支用 2.交易策略这里交易策略是所有规则的集合，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="风控策略篇|002.贷中风控策略框架">
 <meta property="og:url" content="http://yoursite.com/2020/07/16/feng-kong-ce-lue-pian-002-dai-zhong-feng-kong-ce-lue-kuang-jia/index.html">
 <meta property="og:site_name" content="数据科学网">
-<meta property="og:description" content="1.简介1.1.贷中风控内容介绍贷中风控的主要内容是对老用户(历史授信成功用户)在贷款支用、授信结果调整等环节进行全方位的风险评估，判断用户额度范围内支用是否批核以及定期或不定期地对予客户授信的额度、利率、期限以及还款方式进行，统称准入策略和授信策略。 1.2.贷中风控流程图注重流程的全面性用户在操作各项进件流程完整进件后，用户的申请订单推送到风控系统，策略的决策由风控的决策引擎实现(风控决策引">
+<meta property="og:description" content="1.简介1.1.贷中风控内容介绍贷中风控的主要内容是对老用户(历史授信成功用户)在贷款支用、授信结果调整等环节进行全方位的风险评估，判断用户额度范围内支用是否批核，以及定期或不定期地对客户授信的额度、利率、期限以及还款方式进行调整，统称交易策略和授信管理策略。 1.2.贷中风控流程图分为两个环节，授信管理即对费限额进行调整，交易管理即管理用户贷款的支用 2.交易策略这里交易策略是所有规则的集合，">
 <meta property="article:published_time" content="2020-07-16T02:50:05.000Z">
-<meta property="article:modified_time" content="2020-07-16T07:25:25.494Z">
+<meta property="article:modified_time" content="2020-08-07T03:44:08.581Z">
 <meta property="article:author" content="Mr.Zhang">
 <meta property="article:tag" content="策略">
 <meta property="article:tag" content="贷中">
@@ -442,7 +442,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  239字
+                  290字
                 </span>
               
 
@@ -480,8 +480,12 @@
 
       
         <a id="more"></a>
-<h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h1><h2 id="1-1-贷中风控内容介绍"><a href="#1-1-贷中风控内容介绍" class="headerlink" title="1.1.贷中风控内容介绍"></a>1.1.贷中风控内容介绍</h2><p>贷中风控的主要内容是对老用户(历史授信成功用户)在贷款支用、授信结果调整等环节进行全方位的风险评估，判断用户额度范围内支用是否批核以及定期或不定期地对予客户授信的额度、利率、期限以及还款方式进行，统称准入策略和授信策略。</p>
-<h2 id="1-2-贷中风控流程图"><a href="#1-2-贷中风控流程图" class="headerlink" title="1.2.贷中风控流程图"></a>1.2.贷中风控流程图</h2><p>注重流程的全面性<br>用户在操作各项进件流程完整进件后，用户的申请订单推送到风控系统，策略的决策由风控的决策引擎实现(风控决策引擎相关介绍)。<br>整个流程中由各个节点串联，包含反欺诈节点、准入节点、征信节点等。<br>节点的串联关系由各项数据源的成本以及收益综合形成。</p>
+<h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h1><h2 id="1-1-贷中风控内容介绍"><a href="#1-1-贷中风控内容介绍" class="headerlink" title="1.1.贷中风控内容介绍"></a>1.1.贷中风控内容介绍</h2><p>贷中风控的主要内容是对老用户(历史授信成功用户)在贷款支用、授信结果调整等环节进行全方位的风险评估，判断用户额度范围内支用是否批核，以及定期或不定期地对客户授信的额度、利率、期限以及还款方式进行调整，统称<code>交易策略</code>和<code>授信管理策略</code>。</p>
+<h2 id="1-2-贷中风控流程图"><a href="#1-2-贷中风控流程图" class="headerlink" title="1.2.贷中风控流程图"></a>1.2.贷中风控流程图</h2><p>分为两个环节，授信管理即对费限额进行调整，交易管理即管理用户贷款的支用</p>
+<h1 id="2-交易策略"><a href="#2-交易策略" class="headerlink" title="2.交易策略"></a>2.交易策略</h1><p>这里交易策略是所有规则的集合，可分为反欺诈规则和信用类规则。<br>信用类规则可细分为政策类规则、核验类规则、行为类规则、征信类规则。<br>同时可进一步区分客群，新客(未结清过)/老客(结清过)进行管理，在规则模块阈值上有区分</p>
+<h1 id="3-授信管理策略"><a href="#3-授信管理策略" class="headerlink" title="3.授信管理策略"></a>3.授信管理策略</h1><h2 id="3-1-风险评估"><a href="#3-1-风险评估" class="headerlink" title="3.1.风险评估"></a>3.1.风险评估</h2><p>行为评分</p>
+<h2 id="3-2-客户流失评估"><a href="#3-2-客户流失评估" class="headerlink" title="3.2.客户流失评估"></a>3.2.客户流失评估</h2><p>客户流失模型</p>
+<p>LTV</p>
 
       
     </div>
@@ -745,7 +749,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-简介"><span class="nav-text">1.简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-贷中风控内容介绍"><span class="nav-text">1.1.贷中风控内容介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-贷中风控流程图"><span class="nav-text">1.2.贷中风控流程图</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-简介"><span class="nav-text">1.简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-贷中风控内容介绍"><span class="nav-text">1.1.贷中风控内容介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-贷中风控流程图"><span class="nav-text">1.2.贷中风控流程图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-交易策略"><span class="nav-text">2.交易策略</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-授信管理策略"><span class="nav-text">3.授信管理策略</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-风险评估"><span class="nav-text">3.1.风险评估</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-客户流失评估"><span class="nav-text">3.2.客户流失评估</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -776,7 +780,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共10.6k字</span>
+  <span class="post-count">博客全站共10.7k字</span>
 </div>
 </div>
 
