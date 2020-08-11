@@ -58,70 +58,6 @@
       </tags>
   </entry>
   <entry>
-    <title>任务调度与报表系统—操作说明手册</title>
-    <url>/2020/05/26/ren-wu-diao-du-yu-bao-biao-xi-tong-cao-zuo-shuo-ming-shou-ce/</url>
-    <content><![CDATA[<h1 id="1-系统功能简介"><a href="#1-系统功能简介" class="headerlink" title="1 系统功能简介"></a>1 系统功能简介</h1><h2 id="1-1-任务调度系统"><a href="#1-1-任务调度系统" class="headerlink" title="1.1 任务调度系统"></a>1.1 任务调度系统</h2><a id="more"></a>
-<h3 id="1-1-1-简介"><a href="#1-1-1-简介" class="headerlink" title="1.1.1 简介"></a>1.1.1 简介</h3><p>不同组别中间表任务可配置成不同工作域，不同域之间独立运行、独立调度</p>
-<h3 id="1-1-2-工作目录"><a href="#1-1-2-工作目录" class="headerlink" title="1.1.2 工作目录"></a>1.1.2 工作目录</h3><ul>
-<li>本机: /Users/zhangqiang/DATSCI/数据实验室/数据报表  </li>
-<li>服务器: /home/mission<h3 id="1-1-3-文件说明"><a href="#1-1-3-文件说明" class="headerlink" title="1.1.3 文件说明"></a>1.1.3 文件说明</h3></li>
-<li><code>table_mission_域名.py</code> 该域内的任务调度主文件</li>
-<li><code>table_remission.py</code>  任务失败重跑调度文件，需要输入执行参数，只支持单域名内重跑<blockquote>
-<p>var1 var2 var3 var4….<br>var1:该脚本绝对地址<br>var2:任务域名<br>var3:是否重跑下游任务，false/true<br>var.:中间表文件相对文件名称，空格分隔</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="1-1-4-目录说明"><a href="#1-1-4-目录说明" class="headerlink" title="1.1.4 目录说明"></a>1.1.4 目录说明</h3><p>文件夹<code>mid_table_域名</code>为该域名下所有调度所有SQL执行脚本，内可设子目录进行分门别类，便于管理<br>文件夹<code>log_mid_table</code>为日志目录，存储各域的ods数据量(ods_log_<code>域名</code>)、任务调度日志(run_log_<code>域名)、任务重跑日志(rerun_log_</code>域名)，均为Excel文件格式  </p>
-<blockquote>
-<p><code>调度文件py使用详见py文件内容</code></p>
-</blockquote>
-<h2 id="1-2-报表展示平台"><a href="#1-2-报表展示平台" class="headerlink" title="1.2 报表展示平台"></a>1.2 报表展示平台</h2><h3 id="1-2-1-简介"><a href="#1-2-1-简介" class="headerlink" title="1.2.1 简介"></a>1.2.1 简介</h3><ul>
-<li>准备图表所需数据</li>
-<li>按照图表配置进行制图</li>
-</ul>
-<h3 id="1-2-2-工作目录"><a href="#1-2-2-工作目录" class="headerlink" title="1.2.2 工作目录"></a>1.2.2 工作目录</h3><ul>
-<li>本机: /Users/zhangqiang/DATSCI/风控实验室/风控报表  </li>
-<li>服务器: /home/mission</li>
-</ul>
-<h3 id="1-2-3-文件说明"><a href="#1-2-3-文件说明" class="headerlink" title="1.2.3 文件说明"></a>1.2.3 文件说明</h3><ul>
-<li><code>data_域名.py</code> 该域内的图表数据准备主文件</li>
-<li><code>work_域名.py</code> 该域内的制图主文件</li>
-<li><code>report_域名_html_list.xlsx</code>用于记录html文件名，便于次日删除</li>
-</ul>
-<h3 id="1-2-4-目录说明"><a href="#1-2-4-目录说明" class="headerlink" title="1.2.4 目录说明"></a>1.2.4 目录说明</h3><p>文件夹<code>report_sql_域名</code>为该域名下所有报表所需数据执行SQL文件，需要按照报表类别命名排序<br>文件夹<code>report_data_域名</code>为该域名下报表所需数据的存储目录，按天存储，数据文件名为SQL文件名，均为Excel文件格式<br>文件夹<code>report_file_域名</code>为该域名下所有生成的HTML报表文件</p>
-<blockquote>
-<p><code>调度文件py使用详见py文件内容</code></p>
-</blockquote>
-<h1 id="2-代码部署"><a href="#2-代码部署" class="headerlink" title="2.代码部署"></a>2.代码部署</h1><h2 id="2-1-文件上传"><a href="#2-1-文件上传" class="headerlink" title="2.1 文件上传"></a>2.1 文件上传</h2><h3 id="任务调度系统"><a href="#任务调度系统" class="headerlink" title="任务调度系统"></a>任务调度系统</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scp -r  &#x2F;Users&#x2F;zhangqiang&#x2F;DATSCI&#x2F;数据实验室&#x2F;数据报表&#x2F;table_mission_risk.py vm1:&#x2F;home&#x2F;mission&#x2F;   </span><br><span class="line">scp -r  &#x2F;Users&#x2F;zhangqiang&#x2F;DATSCI&#x2F;数据实验室&#x2F;数据报表&#x2F;table_remission.py vm1:&#x2F;home&#x2F;mission&#x2F;   </span><br><span class="line">scp -r  &#x2F;Users&#x2F;zhangqiang&#x2F;DATSCI&#x2F;数据实验室&#x2F;数据报表&#x2F;table_mission_atlantis.py vm1:&#x2F;home&#x2F;mission&#x2F;</span><br></pre></td></tr></table></figure>
-<h3 id="报表展示平台"><a href="#报表展示平台" class="headerlink" title="报表展示平台"></a>报表展示平台</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scp -r  &#x2F;Users&#x2F;zhangqiang&#x2F;DATSCI&#x2F;风控实验室&#x2F;风控报表&#x2F;data_risk.py vm1:&#x2F;home&#x2F;mission&#x2F;    </span><br><span class="line">scp -r  &#x2F;Users&#x2F;zhangqiang&#x2F;DATSCI&#x2F;风控实验室&#x2F;风控报表&#x2F;work_risk.py vm1:&#x2F;home&#x2F;mission&#x2F;</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-2-Git同步"><a href="#2-2-Git同步" class="headerlink" title="2.2 Git同步"></a>2.2 Git同步</h2><h3 id="2-2-1-本机同步到gitlab"><a href="#2-2-1-本机同步到gitlab" class="headerlink" title="2.2.1 本机同步到gitlab"></a>2.2.1 本机同步到gitlab</h3><ul>
-<li>进入目录<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -u -m &#39;备注&#39;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-目录包含:Python包、中间表SQL、报表SQL     </li>
-</ul>
-<h3 id="2-2-2-gitlab同步到服务器"><a href="#2-2-2-gitlab同步到服务器" class="headerlink" title="2.2.2 gitlab同步到服务器"></a>2.2.2 gitlab同步到服务器</h3><blockquote>
-<p>scp -r  /Users/zhangqiang/DATSCI/风控实验室/风控报表/gits.sh vm1:/home/mission/   </p>
-</blockquote>
-<p>内容如下  </p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/lib64/python3.6/site-packages/report   </span><br><span class="line">git pull --rebase origin master</span><br><span class="line"><span class="built_in">cd</span> /usr/lib64/python3.6/site-packages/tools</span><br><span class="line">git pull --rebase origin master</span><br><span class="line"><span class="built_in">cd</span> /home/mission/mid_table_risk</span><br><span class="line">git pull --rebase origin master</span><br><span class="line"><span class="built_in">cd</span> /home/mission/mid_table_atlantis</span><br><span class="line">git pull --rebase origin master</span><br><span class="line"><span class="built_in">cd</span> /home/mission/report_sql_risk</span><br><span class="line">git pull --rebase origin master</span><br></pre></td></tr></table></figure>
-<h2 id="2-3-一次性同步文件"><a href="#2-3-一次性同步文件" class="headerlink" title="2.3 一次性同步文件"></a>2.3 一次性同步文件</h2><p>scp -r  /Users/zhangqiang/DATSCI/风控实验室/风控报表/report_file/echarts.min.js vm1:/usr/share/nginx/html<br>scp -r  /Users/zhangqiang/DATSCI/风控实验室/风控报表/report_file/vintage.js vm1:/usr/share/nginx/html<br>scp -r  /Users/zhangqiang/DATSCI/风控实验室/风控报表/report_file/vintage.js vm1:/usr/share/nginx/html<br>scp -r  /Users/zhangqiang/DATSCI/风控实验室/风控报表/report_file/shine.js vm1:/usr/share/nginx/html<br>scp -r  /Users/zhangqiang/DATSCI/风控实验室/风控报表/report_file/macarons.js vm1:/usr/share/nginx/html</p>
-<h1 id="3-定时任务"><a href="#3-定时任务" class="headerlink" title="3.定时任务"></a>3.定时任务</h1><blockquote>
-<p>crontab -e   </p>
-</blockquote>
-<p>内容如下</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">0 4 * * * /home/mission/gits.sh</span><br><span class="line">0 6 * * * python3 /home/mission/table_mission_risk.py</span><br><span class="line">0 8 * * * python3 /home/mission/data_risk.py</span><br><span class="line">30 8 * * * python3 /home/mission/work_risk.py </span><br><span class="line">0 9 * * * python3 /home/mission/table_mission_atlantis.py</span><br></pre></td></tr></table></figure>
-
-<h1 id="4-本地部署"><a href="#4-本地部署" class="headerlink" title="4 本地部署"></a>4 本地部署</h1><h2 id="4-1-本地执行"><a href="#4-1-本地执行" class="headerlink" title="4.1 本地执行"></a>4.1 本地执行</h2><p>python3 /home/mission/table_mission_risk.py<br>python3 /home/mission/data_risk.py<br>python3 /home/mission/work_risk.py<br>python3 /home/mission/table_mission_atlantis.py</p>
-<h2 id="4-2-服务器同步至本地"><a href="#4-2-服务器同步至本地" class="headerlink" title="4.2 服务器同步至本地"></a>4.2 服务器同步至本地</h2><p>scp -r   vm1:/home/mission/report_data/2020-05-26  /Users/zhangqiang/DATSCI/风控实验室/风控报表/report_data<br>scp -r   vm1:/home/mission/log/ods_log_2020_05_24.xlsx  /Users/zhangqiang/<br>scp -r   vm1:/home/mission/log/run_log_2020_05_24.xlsx  /Users/zhangqiang/</p>
-]]></content>
-      <categories>
-        <category>编程基础</category>
-      </categories>
-      <tags>
-        <tag>报表</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一起学Java | 002.Java语法基础</title>
     <url>/2020/07/02/yi-qi-xue-java-002-java-yu-fa-ji-chu/</url>
     <content><![CDATA[<p>本节我们将介绍Java程序的基础知识，包括：</p>
@@ -190,17 +126,67 @@
       </tags>
   </entry>
   <entry>
-    <title>文章模板</title>
-    <url>/2020/04/10/wen-zhang-mo-ban/</url>
-    <content><![CDATA[<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<p><img src="/2020/04/10/wen-zhang-mo-ban/q.jpg" alt></p>
+    <title>任务调度与报表系统—操作说明手册</title>
+    <url>/2020/05/26/ren-wu-diao-du-yu-bao-biao-xi-tong-cao-zuo-shuo-ming-shou-ce/</url>
+    <content><![CDATA[<h1 id="1-系统功能简介"><a href="#1-系统功能简介" class="headerlink" title="1 系统功能简介"></a>1 系统功能简介</h1><h2 id="1-1-任务调度系统"><a href="#1-1-任务调度系统" class="headerlink" title="1.1 任务调度系统"></a>1.1 任务调度系统</h2><a id="more"></a>
+<h3 id="1-1-1-简介"><a href="#1-1-1-简介" class="headerlink" title="1.1.1 简介"></a>1.1.1 简介</h3><p>不同组别中间表任务可配置成不同工作域，不同域之间独立运行、独立调度</p>
+<h3 id="1-1-2-工作目录"><a href="#1-1-2-工作目录" class="headerlink" title="1.1.2 工作目录"></a>1.1.2 工作目录</h3><ul>
+<li>本机: /Users/zhangqiang/DATSCI/数据实验室/数据报表  </li>
+<li>服务器: /home/mission<h3 id="1-1-3-文件说明"><a href="#1-1-3-文件说明" class="headerlink" title="1.1.3 文件说明"></a>1.1.3 文件说明</h3></li>
+<li><code>table_mission_域名.py</code> 该域内的任务调度主文件</li>
+<li><code>table_remission.py</code>  任务失败重跑调度文件，需要输入执行参数，只支持单域名内重跑<blockquote>
+<p>var1 var2 var3 var4….<br>var1:该脚本绝对地址<br>var2:任务域名<br>var3:是否重跑下游任务，false/true<br>var.:中间表文件相对文件名称，空格分隔</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="1-1-4-目录说明"><a href="#1-1-4-目录说明" class="headerlink" title="1.1.4 目录说明"></a>1.1.4 目录说明</h3><p>文件夹<code>mid_table_域名</code>为该域名下所有调度所有SQL执行脚本，内可设子目录进行分门别类，便于管理<br>文件夹<code>log_mid_table</code>为日志目录，存储各域的ods数据量(ods_log_<code>域名</code>)、任务调度日志(run_log_<code>域名)、任务重跑日志(rerun_log_</code>域名)，均为Excel文件格式  </p>
+<blockquote>
+<p><code>调度文件py使用详见py文件内容</code></p>
+</blockquote>
+<h2 id="1-2-报表展示平台"><a href="#1-2-报表展示平台" class="headerlink" title="1.2 报表展示平台"></a>1.2 报表展示平台</h2><h3 id="1-2-1-简介"><a href="#1-2-1-简介" class="headerlink" title="1.2.1 简介"></a>1.2.1 简介</h3><ul>
+<li>准备图表所需数据</li>
+<li>按照图表配置进行制图</li>
+</ul>
+<h3 id="1-2-2-工作目录"><a href="#1-2-2-工作目录" class="headerlink" title="1.2.2 工作目录"></a>1.2.2 工作目录</h3><ul>
+<li>本机: /Users/zhangqiang/DATSCI/风控实验室/风控报表  </li>
+<li>服务器: /home/mission</li>
+</ul>
+<h3 id="1-2-3-文件说明"><a href="#1-2-3-文件说明" class="headerlink" title="1.2.3 文件说明"></a>1.2.3 文件说明</h3><ul>
+<li><code>data_域名.py</code> 该域内的图表数据准备主文件</li>
+<li><code>work_域名.py</code> 该域内的制图主文件</li>
+<li><code>report_域名_html_list.xlsx</code>用于记录html文件名，便于次日删除</li>
+</ul>
+<h3 id="1-2-4-目录说明"><a href="#1-2-4-目录说明" class="headerlink" title="1.2.4 目录说明"></a>1.2.4 目录说明</h3><p>文件夹<code>report_sql_域名</code>为该域名下所有报表所需数据执行SQL文件，需要按照报表类别命名排序<br>文件夹<code>report_data_域名</code>为该域名下报表所需数据的存储目录，按天存储，数据文件名为SQL文件名，均为Excel文件格式<br>文件夹<code>report_file_域名</code>为该域名下所有生成的HTML报表文件</p>
+<blockquote>
+<p><code>调度文件py使用详见py文件内容</code></p>
+</blockquote>
+<h1 id="2-代码部署"><a href="#2-代码部署" class="headerlink" title="2.代码部署"></a>2.代码部署</h1><h2 id="2-1-文件上传"><a href="#2-1-文件上传" class="headerlink" title="2.1 文件上传"></a>2.1 文件上传</h2><h3 id="任务调度系统"><a href="#任务调度系统" class="headerlink" title="任务调度系统"></a>任务调度系统</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scp -r  &#x2F;Users&#x2F;zhangqiang&#x2F;DATSCI&#x2F;数据实验室&#x2F;数据报表&#x2F;table_mission_risk.py vm1:&#x2F;home&#x2F;mission&#x2F;   </span><br><span class="line">scp -r  &#x2F;Users&#x2F;zhangqiang&#x2F;DATSCI&#x2F;数据实验室&#x2F;数据报表&#x2F;table_remission.py vm1:&#x2F;home&#x2F;mission&#x2F;   </span><br><span class="line">scp -r  &#x2F;Users&#x2F;zhangqiang&#x2F;DATSCI&#x2F;数据实验室&#x2F;数据报表&#x2F;table_mission_atlantis.py vm1:&#x2F;home&#x2F;mission&#x2F;</span><br></pre></td></tr></table></figure>
+<h3 id="报表展示平台"><a href="#报表展示平台" class="headerlink" title="报表展示平台"></a>报表展示平台</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">scp -r  &#x2F;Users&#x2F;zhangqiang&#x2F;DATSCI&#x2F;风控实验室&#x2F;风控报表&#x2F;data_risk.py vm1:&#x2F;home&#x2F;mission&#x2F;    </span><br><span class="line">scp -r  &#x2F;Users&#x2F;zhangqiang&#x2F;DATSCI&#x2F;风控实验室&#x2F;风控报表&#x2F;work_risk.py vm1:&#x2F;home&#x2F;mission&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-2-Git同步"><a href="#2-2-Git同步" class="headerlink" title="2.2 Git同步"></a>2.2 Git同步</h2><h3 id="2-2-1-本机同步到gitlab"><a href="#2-2-1-本机同步到gitlab" class="headerlink" title="2.2.1 本机同步到gitlab"></a>2.2.1 本机同步到gitlab</h3><ul>
+<li>进入目录<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -u -m &#39;备注&#39;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+目录包含:Python包、中间表SQL、报表SQL     </li>
+</ul>
+<h3 id="2-2-2-gitlab同步到服务器"><a href="#2-2-2-gitlab同步到服务器" class="headerlink" title="2.2.2 gitlab同步到服务器"></a>2.2.2 gitlab同步到服务器</h3><blockquote>
+<p>scp -r  /Users/zhangqiang/DATSCI/风控实验室/风控报表/gits.sh vm1:/home/mission/   </p>
+</blockquote>
+<p>内容如下  </p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/lib64/python3.6/site-packages/report   </span><br><span class="line">git pull --rebase origin master</span><br><span class="line"><span class="built_in">cd</span> /usr/lib64/python3.6/site-packages/tools</span><br><span class="line">git pull --rebase origin master</span><br><span class="line"><span class="built_in">cd</span> /home/mission/mid_table_risk</span><br><span class="line">git pull --rebase origin master</span><br><span class="line"><span class="built_in">cd</span> /home/mission/mid_table_atlantis</span><br><span class="line">git pull --rebase origin master</span><br><span class="line"><span class="built_in">cd</span> /home/mission/report_sql_risk</span><br><span class="line">git pull --rebase origin master</span><br></pre></td></tr></table></figure>
+<h2 id="2-3-一次性同步文件"><a href="#2-3-一次性同步文件" class="headerlink" title="2.3 一次性同步文件"></a>2.3 一次性同步文件</h2><p>scp -r  /Users/zhangqiang/DATSCI/风控实验室/风控报表/report_file/echarts.min.js vm1:/usr/share/nginx/html<br>scp -r  /Users/zhangqiang/DATSCI/风控实验室/风控报表/report_file/vintage.js vm1:/usr/share/nginx/html<br>scp -r  /Users/zhangqiang/DATSCI/风控实验室/风控报表/report_file/vintage.js vm1:/usr/share/nginx/html<br>scp -r  /Users/zhangqiang/DATSCI/风控实验室/风控报表/report_file/shine.js vm1:/usr/share/nginx/html<br>scp -r  /Users/zhangqiang/DATSCI/风控实验室/风控报表/report_file/macarons.js vm1:/usr/share/nginx/html</p>
+<h1 id="3-定时任务"><a href="#3-定时任务" class="headerlink" title="3.定时任务"></a>3.定时任务</h1><blockquote>
+<p>crontab -e   </p>
+</blockquote>
+<p>内容如下</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">0 4 * * * /home/mission/gits.sh</span><br><span class="line">0 6 * * * python3 /home/mission/table_mission_risk.py</span><br><span class="line">0 8 * * * python3 /home/mission/data_risk.py</span><br><span class="line">30 8 * * * python3 /home/mission/work_risk.py </span><br><span class="line">0 9 * * * python3 /home/mission/table_mission_atlantis.py</span><br></pre></td></tr></table></figure>
+
+<h1 id="4-本地部署"><a href="#4-本地部署" class="headerlink" title="4 本地部署"></a>4 本地部署</h1><h2 id="4-1-本地执行"><a href="#4-1-本地执行" class="headerlink" title="4.1 本地执行"></a>4.1 本地执行</h2><p>python3 /home/mission/table_mission_risk.py<br>python3 /home/mission/data_risk.py<br>python3 /home/mission/work_risk.py<br>python3 /home/mission/table_mission_atlantis.py</p>
+<h2 id="4-2-服务器同步至本地"><a href="#4-2-服务器同步至本地" class="headerlink" title="4.2 服务器同步至本地"></a>4.2 服务器同步至本地</h2><p>scp -r   vm1:/home/mission/report_data/2020-05-26  /Users/zhangqiang/DATSCI/风控实验室/风控报表/report_data<br>scp -r   vm1:/home/mission/log/ods_log_2020_05_24.xlsx  /Users/zhangqiang/<br>scp -r   vm1:/home/mission/log/run_log_2020_05_24.xlsx  /Users/zhangqiang/</p>
 ]]></content>
       <categories>
-        <category>其他</category>
+        <category>编程基础</category>
       </categories>
       <tags>
-        <tag>标签1</tag>
-        <tag>标签2</tag>
+        <tag>报表</tag>
       </tags>
   </entry>
   <entry>
@@ -270,6 +256,20 @@
       </tags>
   </entry>
   <entry>
+    <title>文章模板</title>
+    <url>/2020/04/10/wen-zhang-mo-ban/</url>
+    <content><![CDATA[<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<p><img src="/2020/04/10/wen-zhang-mo-ban/q.jpg" alt></p>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>标签1</tag>
+        <tag>标签2</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>目录大全|编程基础</title>
     <url>/2020/07/15/mu-lu-da-quan-bian-cheng-ji-chu/</url>
     <content><![CDATA[<p>编程基础相关目录汇总</p>
@@ -303,6 +303,40 @@
       </categories>
       <tags>
         <tag>目录</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>风控数据篇|002.三方数据测试流程</title>
+    <url>/2020/08/11/feng-kong-shu-ju-pian-002-san-fang-shu-ju-ce-shi-liu-cheng/</url>
+    <content><![CDATA[<a id="more"></a>
+
+<h1 id="1-数据产品介绍"><a href="#1-数据产品介绍" class="headerlink" title="1. 数据产品介绍"></a>1. 数据产品介绍</h1><h2 id="1-1-数据源"><a href="#1-1-数据源" class="headerlink" title="1.1.数据源"></a>1.1.数据源</h2><p>三方数据源于各公司自身业务发展积累的数据，包含以下几大类：<br>1）电商数据<br>2）通信数据：极推<br>3）支付数据：<br>4）借贷数据：百融<br>5）设备数据：个推<br>6）征信数据：</p>
+<h2 id="1-2-客户评价维度"><a href="#1-2-客户评价维度" class="headerlink" title="1.2.客户评价维度"></a>1.2.客户评价维度</h2><p>三方数据对客户的评价维度通常包含信用风险、欺诈风险、收入水平、借贷行为等</p>
+<h2 id="1-3-产品形态"><a href="#1-3-产品形态" class="headerlink" title="1.3.产品形态"></a>1.3.产品形态</h2><p>目前三方产品形态包含黑名单类、评分类、标签类（变量）</p>
+<h1 id="2-数据准备"><a href="#2-数据准备" class="headerlink" title="2.数据准备"></a>2.数据准备</h1><h2 id="2-1-测试样本准备"><a href="#2-1-测试样本准备" class="headerlink" title="2.1.测试样本准备"></a>2.1.测试样本准备</h2><p>沟通测试样本数量、需要的样本要素以及加密要素。<br>1）样本数量视数据源成本等而定，通常需要10000条以上样本，如收入维度的数据可测试样本偏小，可实行付费测试<br>2）常见样本要素包含姓名、身份证、手机号、银行卡、设备号<br>3）加密方式有：MD5加密，SHA256加密<br>4）另外还需提供客户的唯一编号(如aid)、申请时间(用于回溯)</p>
+<h2 id="2-2-返回数据整理"><a href="#2-2-返回数据整理" class="headerlink" title="2.2.返回数据整理"></a>2.2.返回数据整理</h2><p>通常对方返回的数据为Excel，包含多个sheet的数据，需要逐一进行数据标准化，标准如下：<br>1）观察每一列的数据含义以及数据类型，对于数值型的空值利用-999，-1等特殊值进行填充<br>2）统一列名，仅限一行，列名为英文，便于直接在HIVE中使用，记录好数据字典<br>3）将每一个sheet的数据另存为csv文件，在Windows中利用notepad++打开文件，将编码调整为utf-8 无bom格式<br>4）统一命名csv文件名</p>
+<h2 id="2-3-数据关联"><a href="#2-3-数据关联" class="headerlink" title="2.3.数据关联"></a>2.3.数据关联</h2><p>将三方返回的数据与自有数据(自有变量、贷后表现、其他属性)进行整合，形成大的数据集<br>1）整理测试样本的自有数据，可包含审批情况、贷后表现、其他三方数据等，形成数据集B，用于不同数据源的交叉验证及区分度分析；<br>2）下载数据集B至返回三方数据同一环境；<br>3）将数据进行整合，形成大数据集合<br>4）记录大表中变量的数据字典</p>
+<h1 id="3-数据分析"><a href="#3-数据分析" class="headerlink" title="3. 数据分析"></a>3. 数据分析</h1><p>将上述汇总数据下载至本地，利用Python进行分析。<br>变量跑批要点：<br>1.特殊值的设定：结合前期2.2中填充的特殊值，设定好参数；<br>2.样本数据集的划分：若单个产品数据量不足，可根据产品划分训练集和验证集。对于数量较多的可按照时间进一步划分；<br>3.目标变量设定：目标变量可以是审批结果或是否逾期；</p>
+<h1 id="4-数据整理"><a href="#4-数据整理" class="headerlink" title="4. 数据整理"></a>4. 数据整理</h1><h2 id="4-1-单变量评估"><a href="#4-1-单变量评估" class="headerlink" title="4.1.单变量评估"></a>4.1.单变量评估</h2><ul>
+<li>变量趋势要好，好的定义：除特殊值外能够单调递增或递减(可适当合并分组)，并且可解释，不与常理违背，比如多头次数越多人越好，这样无法解释，该变量舍弃；</li>
+<li>变量要稳定，稳定的定义：<br>1）在offtime验证集上，变量的分布要比较稳定，可参考PSI；若无offtime验证集，可结合不同产品做适当的判断；<br>2）趋势效果要稳定</li>
+<li>变量可做规则，定义：在变量趋势好的基础上，若能够发现稳定的超过整体2倍badrate的区间，则该变量适合设定规则。</li>
+<li>拒绝区间，要求：要求样本量占总样本量的5%以内(若占比太高，需要质疑)，样本量至少20个人以上</li>
+<li>最好在多个样本上稳定，这样的变量至少适合建模</li>
+</ul>
+<h2 id="4-2-整体数据评估"><a href="#4-2-整体数据评估" class="headerlink" title="4.2.整体数据评估"></a>4.2.整体数据评估</h2><p>1.若个别变量效果很好且稳定且相关性(相关系数矩阵)不大，结合报价决定是否采用<br>2.若效果较好变量比较多，但是又没有特别好(可做规则)的变量，建议联合建模或待定（丰富&amp;源稳定）</p>
+<h2 id="4-3-相关性分析"><a href="#4-3-相关性分析" class="headerlink" title="4.3.相关性分析"></a>4.3.相关性分析</h2><p>1）本次数据中可能涉及多个评分或多个变量，需要评估它们的相关性，以此决定最后可采用数据的质量；<br>2）与其他三方数据源进行相关性分析，若与现有数据源重合性较高，则不采纳；</p>
+<h1 id="5-结果汇总"><a href="#5-结果汇总" class="headerlink" title="5. 结果汇总"></a>5. 结果汇总</h1><ul>
+<li>数据产品概览，可包含行业使用经验</li>
+<li>各项数据的覆盖度</li>
+<li>数据的区分度汇总</li>
+</ul>
+]]></content>
+      <categories>
+        <category>金融科技</category>
+      </categories>
+      <tags>
+        <tag>风控</tag>
       </tags>
   </entry>
   <entry>
@@ -496,6 +530,19 @@
       </tags>
   </entry>
   <entry>
+    <title>风控数据篇|001.数据介绍总览</title>
+    <url>/2020/07/17/feng-kong-shu-ju-pian-001-shu-ju-jie-shao-zong-lan/</url>
+    <content><![CDATA[<a id="more"></a>
+
+<h1 id="数据分类"><a href="#数据分类" class="headerlink" title="数据分类"></a>数据分类</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">个人信息</span><br><span class="line">	身份</span><br><span class="line">		家庭</span><br><span class="line">		资产</span><br><span class="line">		基本</span><br><span class="line">	关系</span><br><span class="line">		联系人</span><br><span class="line">		推荐人</span><br><span class="line">		分享人</span><br><span class="line">	设备</span><br><span class="line">		APP</span><br><span class="line">		公众号</span><br><span class="line">外部信息</span><br><span class="line">	商户</span><br><span class="line">		线下消费</span><br><span class="line">		线上产品</span><br><span class="line">	征信</span><br><span class="line">		人行征信</span><br><span class="line">		其它征信</span><br><span class="line">业务信息</span><br><span class="line">	财富</span><br><span class="line">		理财</span><br><span class="line">		保险</span><br><span class="line">	信货</span><br><span class="line">		借贷</span><br><span class="line">		支付</span><br><span class="line">	消费</span><br><span class="line">		门店</span><br><span class="line">		线上</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>金融科技</category>
+      </categories>
+      <tags>
+        <tag>数据</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>风控模型篇|000.风险建模流程</title>
     <url>/2020/07/30/feng-kong-mo-xing-pian-000-feng-xian-jian-mo-liu-cheng/</url>
     <content><![CDATA[<a id="more"></a>
@@ -531,16 +578,15 @@
       </tags>
   </entry>
   <entry>
-    <title>风控数据篇|001.数据介绍总览</title>
-    <url>/2020/07/17/feng-kong-shu-ju-pian-001-shu-ju-jie-shao-zong-lan/</url>
+    <title>风控模型篇|001.申请评分卡开发</title>
+    <url>/2020/07/17/feng-kong-mo-xing-pian-001-shen-qing-ping-fen-qia-kai-fa/</url>
     <content><![CDATA[<a id="more"></a>
-
-<h1 id="数据分类"><a href="#数据分类" class="headerlink" title="数据分类"></a>数据分类</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">个人信息</span><br><span class="line">	身份</span><br><span class="line">		家庭</span><br><span class="line">		资产</span><br><span class="line">		基本</span><br><span class="line">	关系</span><br><span class="line">		联系人</span><br><span class="line">		推荐人</span><br><span class="line">		分享人</span><br><span class="line">	设备</span><br><span class="line">		APP</span><br><span class="line">		公众号</span><br><span class="line">外部信息</span><br><span class="line">	商户</span><br><span class="line">		线下消费</span><br><span class="line">		线上产品</span><br><span class="line">	征信</span><br><span class="line">		人行征信</span><br><span class="line">		其它征信</span><br><span class="line">业务信息</span><br><span class="line">	财富</span><br><span class="line">		理财</span><br><span class="line">		保险</span><br><span class="line">	信货</span><br><span class="line">		借贷</span><br><span class="line">		支付</span><br><span class="line">	消费</span><br><span class="line">		门店</span><br><span class="line">		线上</span><br></pre></td></tr></table></figure>]]></content>
+<h1 id="目标变量定义"><a href="#目标变量定义" class="headerlink" title="目标变量定义"></a>目标变量定义</h1><h1 id="样本选择"><a href="#样本选择" class="headerlink" title="样本选择"></a>样本选择</h1><h1 id="数据源"><a href="#数据源" class="headerlink" title="数据源"></a>数据源</h1>]]></content>
       <categories>
         <category>金融科技</category>
       </categories>
       <tags>
-        <tag>数据</tag>
+        <tag>模型</tag>
       </tags>
   </entry>
   <entry>
@@ -559,10 +605,9 @@
       </tags>
   </entry>
   <entry>
-    <title>风控模型篇|001.申请评分卡开发</title>
-    <url>/2020/07/17/feng-kong-mo-xing-pian-001-shen-qing-ping-fen-qia-kai-fa/</url>
-    <content><![CDATA[<a id="more"></a>
-<h1 id="目标变量定义"><a href="#目标变量定义" class="headerlink" title="目标变量定义"></a>目标变量定义</h1><h1 id="样本选择"><a href="#样本选择" class="headerlink" title="样本选择"></a>样本选择</h1><h1 id="数据源"><a href="#数据源" class="headerlink" title="数据源"></a>数据源</h1>]]></content>
+    <title>风控模型篇|004.拒绝推断</title>
+    <url>/2020/07/17/feng-kong-mo-xing-pian-004-ju-jue-tui-duan/</url>
+    <content><![CDATA[<a id="more"></a>]]></content>
       <categories>
         <category>金融科技</category>
       </categories>
@@ -583,8 +628,8 @@
       </tags>
   </entry>
   <entry>
-    <title>风控模型篇|004.拒绝推断</title>
-    <url>/2020/07/17/feng-kong-mo-xing-pian-004-ju-jue-tui-duan/</url>
+    <title>风控模型篇|005.风控模型指标</title>
+    <url>/2020/07/17/feng-kong-mo-xing-pian-005-feng-kong-mo-xing-zhi-biao/</url>
     <content><![CDATA[<a id="more"></a>]]></content>
       <categories>
         <category>金融科技</category>
@@ -594,14 +639,84 @@
       </tags>
   </entry>
   <entry>
-    <title>风控模型篇|005.风控模型指标</title>
-    <url>/2020/07/17/feng-kong-mo-xing-pian-005-feng-kong-mo-xing-zhi-biao/</url>
-    <content><![CDATA[<a id="more"></a>]]></content>
+    <title>风控策略篇|003.贷前反欺诈规则</title>
+    <url>/2020/07/17/feng-kong-ce-lue-pian-003-dai-qian-fan-qi-zha-gui-ze/</url>
+    <content><![CDATA[<a id="more"></a>
+<h1 id="1-欺诈风险简介"><a href="#1-欺诈风险简介" class="headerlink" title="1.欺诈风险简介"></a>1.欺诈风险简介</h1><h1 id="1-1-欺诈风险分类"><a href="#1-1-欺诈风险分类" class="headerlink" title="1.1.欺诈风险分类"></a>1.1.欺诈风险分类</h1><p>从作案规模上，信贷反欺诈一般可分为个人欺诈和团队欺诈。<br>个人欺诈重点核查个人及联系人信息，包括：</p>
+<ul>
+<li>黑户风险：借款人及联系人各项信息命中黑名单。包括内部黑名单(逾期严重用户、恶意投诉用户等)、外部外部黑名单（征信&amp;三方数据）；</li>
+<li>恶意欺诈：借款人通过伪造资料、伪造设备等造假行为蓄意骗贷，重点核查用户资料真实性和设备信息；</li>
+<li>身份冒用：伪冒他人身份进行欺诈骗贷。包括熟人冒用（亲戚朋友、同学等）和他人盗用（购买他人四件套、个人隐私信息泄漏等）。一般可通过信审、人脸识别、活体验证等方式来核验借款人身份。需对人脸识别等活体信息进行检测识别；</li>
+<li>中介风险：黑中介哄骗或招揽客户实施骗贷。网贷中介有利有弊，好中介可帮助平台导流（类似贷款超市），提高市场份额；黑中介将对平台风控漏洞进行大规模攻击，造成巨大资损。黑中介可利用白户轻松突破风控防线，并骗取白户的高额手续费。黑中介通讯录一般会存客户的号码；若是远程贷款操作，可能会采取视频通话、翻拍照片来应对活体识别核身；  </li>
+</ul>
+<p>团队欺诈重点核查所有信息之间的关联性，包括：</p>
+<ul>
+<li>地理位置：同一区域申请集中性及历史批核情况</li>
+<li>信息共用：联系人、单位、居住地、设备等</li>
+</ul>
+]]></content>
       <categories>
         <category>金融科技</category>
       </categories>
       <tags>
-        <tag>模型</tag>
+        <tag>贷前</tag>
+        <tag>反欺诈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>风控策略篇|002.贷中风控策略框架</title>
+    <url>/2020/07/16/feng-kong-ce-lue-pian-002-dai-zhong-feng-kong-ce-lue-kuang-jia/</url>
+    <content><![CDATA[<a id="more"></a>
+<h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h1><h2 id="1-1-贷中风控内容介绍"><a href="#1-1-贷中风控内容介绍" class="headerlink" title="1.1.贷中风控内容介绍"></a>1.1.贷中风控内容介绍</h2><p>贷中风控的主要内容是对老用户(历史授信成功用户)在贷款支用、授信结果调整等环节进行全方位的风险评估，判断用户额度范围内支用是否批核，以及定期或不定期地对客户授信的额度、利率、期限以及还款方式进行调整，统称<code>交易策略</code>和<code>授信管理策略</code>。</p>
+<h2 id="1-2-贷中风控流程图"><a href="#1-2-贷中风控流程图" class="headerlink" title="1.2.贷中风控流程图"></a>1.2.贷中风控流程图</h2><p>分为两个环节，授信管理即对费限额进行调整，交易管理即管理用户贷款的支用</p>
+<h1 id="2-交易策略"><a href="#2-交易策略" class="headerlink" title="2.交易策略"></a>2.交易策略</h1><p>这里交易策略是所有规则的集合，可分为反欺诈规则和信用类规则。<br>信用类规则可细分为政策类规则、核验类规则、行为类规则、征信类规则。<br>同时可进一步区分客群，新客(未结清过)/老客(结清过)进行管理，在规则模块阈值上有区分</p>
+<h1 id="3-授信管理策略"><a href="#3-授信管理策略" class="headerlink" title="3.授信管理策略"></a>3.授信管理策略</h1><h2 id="3-1-风险评估"><a href="#3-1-风险评估" class="headerlink" title="3.1.风险评估"></a>3.1.风险评估</h2><p>行为评分</p>
+<h2 id="3-2-客户流失评估"><a href="#3-2-客户流失评估" class="headerlink" title="3.2.客户流失评估"></a>3.2.客户流失评估</h2><p>客户流失模型</p>
+<p>LTV</p>
+]]></content>
+      <categories>
+        <category>金融科技</category>
+      </categories>
+      <tags>
+        <tag>贷中</tag>
+        <tag>策略</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>风控策略篇|004.贷前信用类规则</title>
+    <url>/2020/07/17/feng-kong-ce-lue-pian-004-dai-qian-xin-yong-lei-gui-ze/</url>
+    <content><![CDATA[<a id="more"></a>
+
+<p>信用类规则重点防范信用风险</p>
+<h1 id="政策类规则"><a href="#政策类规则" class="headerlink" title="政策类规则"></a>政策类规则</h1><ul>
+<li>年龄准入</li>
+<li>地址准入:身份证号码、户籍地址、居住地址、手机号归属</li>
+<li>职业准入:学生职业、学生地址、学生公司</li>
+</ul>
+<h1 id="行为类规则"><a href="#行为类规则" class="headerlink" title="行为类规则"></a>行为类规则</h1><ul>
+<li>历史申请行为</li>
+<li>历史还款行为</li>
+<li>操作设备信息</li>
+</ul>
+<h1 id="核验类规则"><a href="#核验类规则" class="headerlink" title="核验类规则"></a>核验类规则</h1><ul>
+<li>手机入网时长</li>
+<li>手机是否本人实名</li>
+</ul>
+<h1 id="征信类规则"><a href="#征信类规则" class="headerlink" title="征信类规则"></a>征信类规则</h1><ul>
+<li>外部申请历史:人行征信/互金协会/百行征信+百融</li>
+<li>外部授信历史:人行征信/互金协会/百行征信</li>
+<li>外部还款历史:人行征信/互金协会/百行征信+探知</li>
+<li>外部风险名单:百融+51公积金</li>
+<li>外部各项综合评分:各类源数据</li>
+</ul>
+]]></content>
+      <categories>
+        <category>金融科技</category>
+      </categories>
+      <tags>
+        <tag>标签2</tag>
+        <tag>贷前</tag>
+        <tag>标签3</tag>
       </tags>
   </entry>
   <entry>
@@ -643,87 +758,6 @@
       <tags>
         <tag>贷前</tag>
         <tag>策略</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>风控策略篇|002.贷中风控策略框架</title>
-    <url>/2020/07/16/feng-kong-ce-lue-pian-002-dai-zhong-feng-kong-ce-lue-kuang-jia/</url>
-    <content><![CDATA[<a id="more"></a>
-<h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h1><h2 id="1-1-贷中风控内容介绍"><a href="#1-1-贷中风控内容介绍" class="headerlink" title="1.1.贷中风控内容介绍"></a>1.1.贷中风控内容介绍</h2><p>贷中风控的主要内容是对老用户(历史授信成功用户)在贷款支用、授信结果调整等环节进行全方位的风险评估，判断用户额度范围内支用是否批核，以及定期或不定期地对客户授信的额度、利率、期限以及还款方式进行调整，统称<code>交易策略</code>和<code>授信管理策略</code>。</p>
-<h2 id="1-2-贷中风控流程图"><a href="#1-2-贷中风控流程图" class="headerlink" title="1.2.贷中风控流程图"></a>1.2.贷中风控流程图</h2><p>分为两个环节，授信管理即对费限额进行调整，交易管理即管理用户贷款的支用</p>
-<h1 id="2-交易策略"><a href="#2-交易策略" class="headerlink" title="2.交易策略"></a>2.交易策略</h1><p>这里交易策略是所有规则的集合，可分为反欺诈规则和信用类规则。<br>信用类规则可细分为政策类规则、核验类规则、行为类规则、征信类规则。<br>同时可进一步区分客群，新客(未结清过)/老客(结清过)进行管理，在规则模块阈值上有区分</p>
-<h1 id="3-授信管理策略"><a href="#3-授信管理策略" class="headerlink" title="3.授信管理策略"></a>3.授信管理策略</h1><h2 id="3-1-风险评估"><a href="#3-1-风险评估" class="headerlink" title="3.1.风险评估"></a>3.1.风险评估</h2><p>行为评分</p>
-<h2 id="3-2-客户流失评估"><a href="#3-2-客户流失评估" class="headerlink" title="3.2.客户流失评估"></a>3.2.客户流失评估</h2><p>客户流失模型</p>
-<p>LTV</p>
-]]></content>
-      <categories>
-        <category>金融科技</category>
-      </categories>
-      <tags>
-        <tag>策略</tag>
-        <tag>贷中</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>风控策略篇|003.贷前反欺诈规则</title>
-    <url>/2020/07/17/feng-kong-ce-lue-pian-003-dai-qian-fan-qi-zha-gui-ze/</url>
-    <content><![CDATA[<a id="more"></a>
-<h1 id="1-欺诈风险简介"><a href="#1-欺诈风险简介" class="headerlink" title="1.欺诈风险简介"></a>1.欺诈风险简介</h1><h1 id="1-1-欺诈风险分类"><a href="#1-1-欺诈风险分类" class="headerlink" title="1.1.欺诈风险分类"></a>1.1.欺诈风险分类</h1><p>从作案规模上，信贷反欺诈一般可分为个人欺诈和团队欺诈。<br>个人欺诈重点核查个人及联系人信息，包括：</p>
-<ul>
-<li>黑户风险：借款人及联系人各项信息命中黑名单。包括内部黑名单(逾期严重用户、恶意投诉用户等)、外部外部黑名单（征信&amp;三方数据）；</li>
-<li>恶意欺诈：借款人通过伪造资料、伪造设备等造假行为蓄意骗贷，重点核查用户资料真实性和设备信息；</li>
-<li>身份冒用：伪冒他人身份进行欺诈骗贷。包括熟人冒用（亲戚朋友、同学等）和他人盗用（购买他人四件套、个人隐私信息泄漏等）。一般可通过信审、人脸识别、活体验证等方式来核验借款人身份。需对人脸识别等活体信息进行检测识别；</li>
-<li>中介风险：黑中介哄骗或招揽客户实施骗贷。网贷中介有利有弊，好中介可帮助平台导流（类似贷款超市），提高市场份额；黑中介将对平台风控漏洞进行大规模攻击，造成巨大资损。黑中介可利用白户轻松突破风控防线，并骗取白户的高额手续费。黑中介通讯录一般会存客户的号码；若是远程贷款操作，可能会采取视频通话、翻拍照片来应对活体识别核身；  </li>
-</ul>
-<p>团队欺诈重点核查所有信息之间的关联性，包括：</p>
-<ul>
-<li>地理位置：同一区域申请集中性及历史批核情况</li>
-<li>信息共用：联系人、单位、居住地、设备等</li>
-</ul>
-]]></content>
-      <categories>
-        <category>金融科技</category>
-      </categories>
-      <tags>
-        <tag>贷前</tag>
-        <tag>反欺诈</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>风控策略篇|004.贷前信用类规则</title>
-    <url>/2020/07/17/feng-kong-ce-lue-pian-004-dai-qian-xin-yong-lei-gui-ze/</url>
-    <content><![CDATA[<a id="more"></a>
-
-<p>信用类规则重点防范信用风险</p>
-<h1 id="政策类规则"><a href="#政策类规则" class="headerlink" title="政策类规则"></a>政策类规则</h1><ul>
-<li>年龄准入</li>
-<li>地址准入:身份证号码、户籍地址、居住地址、手机号归属</li>
-<li>职业准入:学生职业、学生地址、学生公司</li>
-</ul>
-<h1 id="行为类规则"><a href="#行为类规则" class="headerlink" title="行为类规则"></a>行为类规则</h1><ul>
-<li>历史申请行为</li>
-<li>历史还款行为</li>
-<li>操作设备信息</li>
-</ul>
-<h1 id="核验类规则"><a href="#核验类规则" class="headerlink" title="核验类规则"></a>核验类规则</h1><ul>
-<li>手机入网时长</li>
-<li>手机是否本人实名</li>
-</ul>
-<h1 id="征信类规则"><a href="#征信类规则" class="headerlink" title="征信类规则"></a>征信类规则</h1><ul>
-<li>外部申请历史:人行征信/互金协会/百行征信+百融</li>
-<li>外部授信历史:人行征信/互金协会/百行征信</li>
-<li>外部还款历史:人行征信/互金协会/百行征信+探知</li>
-<li>外部风险名单:百融+51公积金</li>
-<li>外部各项综合评分:各类源数据</li>
-</ul>
-]]></content>
-      <categories>
-        <category>金融科技</category>
-      </categories>
-      <tags>
-        <tag>标签2</tag>
-        <tag>贷前</tag>
-        <tag>标签3</tag>
       </tags>
   </entry>
   <entry>
@@ -796,24 +830,6 @@
       </tags>
   </entry>
   <entry>
-    <title>风控策略篇|010.贷中额度策略</title>
-    <url>/2020/07/17/feng-kong-ce-lue-pian-010-dai-zhong-e-du-ce-lue/</url>
-    <content><![CDATA[<a id="more"></a>
-
-<h1 id="客群划分"><a href="#客群划分" class="headerlink" title="客群划分"></a>客群划分</h1><p>以历史授信成功用户为整体，可划分为授信未使用、使用中和结清未使用<br>不同人群调整目的和方向不同，且所依赖数据源有区别</p>
-<h1 id="贷前策略参考调整"><a href="#贷前策略参考调整" class="headerlink" title="贷前策略参考调整"></a>贷前策略参考调整</h1><p>根据贷前策略最新的数据表现和调整方向，譬如某些新规则、新模型的上线，可重新评估，并结合行为评分</p>
-<h1 id="行为评分的使用"><a href="#行为评分的使用" class="headerlink" title="行为评分的使用"></a>行为评分的使用</h1><h2 id="组成信息"><a href="#组成信息" class="headerlink" title="组成信息"></a>组成信息</h2><p>征信、还款信息、三方数据信息、行为数据等</p>
-<h1 id="执行策略"><a href="#执行策略" class="headerlink" title="执行策略"></a>执行策略</h1><h2 id="额度调整策略"><a href="#额度调整策略" class="headerlink" title="额度调整策略"></a>额度调整策略</h2><h2 id="利率调整策略"><a href="#利率调整策略" class="headerlink" title="利率调整策略"></a>利率调整策略</h2><p>结合收益情况</p>
-]]></content>
-      <categories>
-        <category>金融科技</category>
-      </categories>
-      <tags>
-        <tag>贷中</tag>
-        <tag>额度</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>风控策略篇|008.贷中反欺诈规则</title>
     <url>/2020/07/17/feng-kong-ce-lue-pian-008-dai-zhong-fan-qi-zha-gui-ze/</url>
     <content><![CDATA[<a id="more"></a>
@@ -824,8 +840,8 @@
         <category>金融科技</category>
       </categories>
       <tags>
-        <tag>贷中</tag>
         <tag>反欺诈</tag>
+        <tag>贷中</tag>
       </tags>
   </entry>
   <entry>
@@ -846,6 +862,24 @@
       <tags>
         <tag>贷中</tag>
         <tag>准入</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>风控策略篇|010.贷中额度策略</title>
+    <url>/2020/07/17/feng-kong-ce-lue-pian-010-dai-zhong-e-du-ce-lue/</url>
+    <content><![CDATA[<a id="more"></a>
+
+<h1 id="客群划分"><a href="#客群划分" class="headerlink" title="客群划分"></a>客群划分</h1><p>以历史授信成功用户为整体，可划分为授信未使用、使用中和结清未使用<br>不同人群调整目的和方向不同，且所依赖数据源有区别</p>
+<h1 id="贷前策略参考调整"><a href="#贷前策略参考调整" class="headerlink" title="贷前策略参考调整"></a>贷前策略参考调整</h1><p>根据贷前策略最新的数据表现和调整方向，譬如某些新规则、新模型的上线，可重新评估，并结合行为评分</p>
+<h1 id="行为评分的使用"><a href="#行为评分的使用" class="headerlink" title="行为评分的使用"></a>行为评分的使用</h1><h2 id="组成信息"><a href="#组成信息" class="headerlink" title="组成信息"></a>组成信息</h2><p>征信、还款信息、三方数据信息、行为数据等</p>
+<h1 id="执行策略"><a href="#执行策略" class="headerlink" title="执行策略"></a>执行策略</h1><h2 id="额度调整策略"><a href="#额度调整策略" class="headerlink" title="额度调整策略"></a>额度调整策略</h2><h2 id="利率调整策略"><a href="#利率调整策略" class="headerlink" title="利率调整策略"></a>利率调整策略</h2><p>结合收益情况</p>
+]]></content>
+      <categories>
+        <category>金融科技</category>
+      </categories>
+      <tags>
+        <tag>贷中</tag>
+        <tag>额度</tag>
       </tags>
   </entry>
 </search>
