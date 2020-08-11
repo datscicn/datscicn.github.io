@@ -190,72 +190,6 @@
       </tags>
   </entry>
   <entry>
-    <title>目录大全|人工智能</title>
-    <url>/2020/07/15/mu-lu-da-quan-ren-gong-zhi-neng/</url>
-    <content><![CDATA[<p>人工智能系列目录汇总</p>
-<a id="more"></a>
-<blockquote>
-<p>人工智能基础系列</p>
-</blockquote>
-<ul>
-<li>数理基础<ul>
-<li>线性代数</li>
-<li>概率论</li>
-</ul>
-</li>
-<li>算法基础<ul>
-<li>特征工程</li>
-<li>优化算法</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>人工智能算法系列</p>
-</blockquote>
-<ul>
-<li>人工智能算法汇总介绍</li>
-<li>经典算法<ul>
-<li>决策树</li>
-<li>支持向量机</li>
-<li>逻辑回归</li>
-</ul>
-</li>
-<li>高阶算法<ul>
-<li>神经网络</li>
-</ul>
-</li>
-<li>集成学习<ul>
-<li>bagging</li>
-<li>boosting</li>
-<li>随机森林</li>
-<li>gbdt</li>
-</ul>
-</li>
-<li>非监督学习<ul>
-<li>自然语言处理</li>
-<li>聚类算法</li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>人工智能应用系列</p>
-</blockquote>
-<ul>
-<li>应用场景简介<ul>
-<li>营销获客</li>
-<li>风控</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-      <tags>
-        <tag>目录</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>文章模板</title>
     <url>/2020/04/10/wen-zhang-mo-ban/</url>
     <content><![CDATA[<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
@@ -303,40 +237,6 @@
       </categories>
       <tags>
         <tag>目录</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>风控数据篇|002.三方数据测试流程</title>
-    <url>/2020/08/11/feng-kong-shu-ju-pian-002-san-fang-shu-ju-ce-shi-liu-cheng/</url>
-    <content><![CDATA[<a id="more"></a>
-
-<h1 id="1-数据产品介绍"><a href="#1-数据产品介绍" class="headerlink" title="1. 数据产品介绍"></a>1. 数据产品介绍</h1><h2 id="1-1-数据源"><a href="#1-1-数据源" class="headerlink" title="1.1.数据源"></a>1.1.数据源</h2><p>三方数据源于各公司自身业务发展积累的数据，包含以下几大类：<br>1）电商数据<br>2）通信数据：极推<br>3）支付数据：<br>4）借贷数据：百融<br>5）设备数据：个推<br>6）征信数据：</p>
-<h2 id="1-2-客户评价维度"><a href="#1-2-客户评价维度" class="headerlink" title="1.2.客户评价维度"></a>1.2.客户评价维度</h2><p>三方数据对客户的评价维度通常包含信用风险、欺诈风险、收入水平、借贷行为等</p>
-<h2 id="1-3-产品形态"><a href="#1-3-产品形态" class="headerlink" title="1.3.产品形态"></a>1.3.产品形态</h2><p>目前三方产品形态包含黑名单类、评分类、标签类（变量）</p>
-<h1 id="2-数据准备"><a href="#2-数据准备" class="headerlink" title="2.数据准备"></a>2.数据准备</h1><h2 id="2-1-测试样本准备"><a href="#2-1-测试样本准备" class="headerlink" title="2.1.测试样本准备"></a>2.1.测试样本准备</h2><p>沟通测试样本数量、需要的样本要素以及加密要素。<br>1）样本数量视数据源成本等而定，通常需要10000条以上样本，如收入维度的数据可测试样本偏小，可实行付费测试<br>2）常见样本要素包含姓名、身份证、手机号、银行卡、设备号<br>3）加密方式有：MD5加密，SHA256加密<br>4）另外还需提供客户的唯一编号(如aid)、申请时间(用于回溯)</p>
-<h2 id="2-2-返回数据整理"><a href="#2-2-返回数据整理" class="headerlink" title="2.2.返回数据整理"></a>2.2.返回数据整理</h2><p>通常对方返回的数据为Excel，包含多个sheet的数据，需要逐一进行数据标准化，标准如下：<br>1）观察每一列的数据含义以及数据类型，对于数值型的空值利用-999，-1等特殊值进行填充<br>2）统一列名，仅限一行，列名为英文，便于直接在HIVE中使用，记录好数据字典<br>3）将每一个sheet的数据另存为csv文件，在Windows中利用notepad++打开文件，将编码调整为utf-8 无bom格式<br>4）统一命名csv文件名</p>
-<h2 id="2-3-数据关联"><a href="#2-3-数据关联" class="headerlink" title="2.3.数据关联"></a>2.3.数据关联</h2><p>将三方返回的数据与自有数据(自有变量、贷后表现、其他属性)进行整合，形成大的数据集<br>1）整理测试样本的自有数据，可包含审批情况、贷后表现、其他三方数据等，形成数据集B，用于不同数据源的交叉验证及区分度分析；<br>2）下载数据集B至返回三方数据同一环境；<br>3）将数据进行整合，形成大数据集合<br>4）记录大表中变量的数据字典</p>
-<h1 id="3-数据分析"><a href="#3-数据分析" class="headerlink" title="3. 数据分析"></a>3. 数据分析</h1><p>将上述汇总数据下载至本地，利用Python进行分析。<br>变量跑批要点：<br>1.特殊值的设定：结合前期2.2中填充的特殊值，设定好参数；<br>2.样本数据集的划分：若单个产品数据量不足，可根据产品划分训练集和验证集。对于数量较多的可按照时间进一步划分；<br>3.目标变量设定：目标变量可以是审批结果或是否逾期；</p>
-<h1 id="4-数据整理"><a href="#4-数据整理" class="headerlink" title="4. 数据整理"></a>4. 数据整理</h1><h2 id="4-1-单变量评估"><a href="#4-1-单变量评估" class="headerlink" title="4.1.单变量评估"></a>4.1.单变量评估</h2><ul>
-<li>变量趋势要好，好的定义：除特殊值外能够单调递增或递减(可适当合并分组)，并且可解释，不与常理违背，比如多头次数越多人越好，这样无法解释，该变量舍弃；</li>
-<li>变量要稳定，稳定的定义：<br>1）在offtime验证集上，变量的分布要比较稳定，可参考PSI；若无offtime验证集，可结合不同产品做适当的判断；<br>2）趋势效果要稳定</li>
-<li>变量可做规则，定义：在变量趋势好的基础上，若能够发现稳定的超过整体2倍badrate的区间，则该变量适合设定规则。</li>
-<li>拒绝区间，要求：要求样本量占总样本量的5%以内(若占比太高，需要质疑)，样本量至少20个人以上</li>
-<li>最好在多个样本上稳定，这样的变量至少适合建模</li>
-</ul>
-<h2 id="4-2-整体数据评估"><a href="#4-2-整体数据评估" class="headerlink" title="4.2.整体数据评估"></a>4.2.整体数据评估</h2><p>1.若个别变量效果很好且稳定且相关性(相关系数矩阵)不大，结合报价决定是否采用<br>2.若效果较好变量比较多，但是又没有特别好(可做规则)的变量，建议联合建模或待定（丰富&amp;源稳定）</p>
-<h2 id="4-3-相关性分析"><a href="#4-3-相关性分析" class="headerlink" title="4.3.相关性分析"></a>4.3.相关性分析</h2><p>1）本次数据中可能涉及多个评分或多个变量，需要评估它们的相关性，以此决定最后可采用数据的质量；<br>2）与其他三方数据源进行相关性分析，若与现有数据源重合性较高，则不采纳；</p>
-<h1 id="5-结果汇总"><a href="#5-结果汇总" class="headerlink" title="5. 结果汇总"></a>5. 结果汇总</h1><ul>
-<li>数据产品概览，可包含行业使用经验</li>
-<li>各项数据的覆盖度</li>
-<li>数据的区分度汇总</li>
-</ul>
-]]></content>
-      <categories>
-        <category>金融科技</category>
-      </categories>
-      <tags>
-        <tag>风控</tag>
       </tags>
   </entry>
   <entry>
@@ -530,6 +430,72 @@
       </tags>
   </entry>
   <entry>
+    <title>目录大全|人工智能</title>
+    <url>/2020/07/15/mu-lu-da-quan-ren-gong-zhi-neng/</url>
+    <content><![CDATA[<p>人工智能系列目录汇总</p>
+<a id="more"></a>
+<blockquote>
+<p>人工智能基础系列</p>
+</blockquote>
+<ul>
+<li>数理基础<ul>
+<li>线性代数</li>
+<li>概率论</li>
+</ul>
+</li>
+<li>算法基础<ul>
+<li>特征工程</li>
+<li>优化算法</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>人工智能算法系列</p>
+</blockquote>
+<ul>
+<li>人工智能算法汇总介绍</li>
+<li>经典算法<ul>
+<li>决策树</li>
+<li>支持向量机</li>
+<li>逻辑回归</li>
+</ul>
+</li>
+<li>高阶算法<ul>
+<li>神经网络</li>
+</ul>
+</li>
+<li>集成学习<ul>
+<li>bagging</li>
+<li>boosting</li>
+<li>随机森林</li>
+<li>gbdt</li>
+</ul>
+</li>
+<li>非监督学习<ul>
+<li>自然语言处理</li>
+<li>聚类算法</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>人工智能应用系列</p>
+</blockquote>
+<ul>
+<li>应用场景简介<ul>
+<li>营销获客</li>
+<li>风控</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+      <tags>
+        <tag>目录</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>风控数据篇|001.数据介绍总览</title>
     <url>/2020/07/17/feng-kong-shu-ju-pian-001-shu-ju-jie-shao-zong-lan/</url>
     <content><![CDATA[<a id="more"></a>
@@ -540,6 +506,40 @@
       </categories>
       <tags>
         <tag>数据</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>风控数据篇|002.三方数据测试流程</title>
+    <url>/2020/08/11/feng-kong-shu-ju-pian-002-san-fang-shu-ju-ce-shi-liu-cheng/</url>
+    <content><![CDATA[<a id="more"></a>
+
+<h1 id="1-数据产品介绍"><a href="#1-数据产品介绍" class="headerlink" title="1. 数据产品介绍"></a>1. 数据产品介绍</h1><h2 id="1-1-数据源"><a href="#1-1-数据源" class="headerlink" title="1.1.数据源"></a>1.1.数据源</h2><p>三方数据源于各公司自身业务发展积累的数据，包含以下几大类：<br>1）电商数据<br>2）通信数据：极推<br>3）支付数据：<br>4）借贷数据：百融<br>5）设备数据：个推<br>6）征信数据：</p>
+<h2 id="1-2-客户评价维度"><a href="#1-2-客户评价维度" class="headerlink" title="1.2.客户评价维度"></a>1.2.客户评价维度</h2><p>三方数据对客户的评价维度通常包含信用风险、欺诈风险、收入水平、借贷行为等</p>
+<h2 id="1-3-产品形态"><a href="#1-3-产品形态" class="headerlink" title="1.3.产品形态"></a>1.3.产品形态</h2><p>目前三方产品形态包含黑名单类、评分类、标签类（变量）</p>
+<h1 id="2-数据准备"><a href="#2-数据准备" class="headerlink" title="2.数据准备"></a>2.数据准备</h1><h2 id="2-1-测试样本准备"><a href="#2-1-测试样本准备" class="headerlink" title="2.1.测试样本准备"></a>2.1.测试样本准备</h2><p>沟通测试样本数量、需要的样本要素以及加密要素。<br>1）样本数量视数据源成本等而定，通常需要10000条以上样本，如收入维度的数据可测试样本偏小，可实行付费测试<br>2）常见样本要素包含姓名、身份证、手机号、银行卡、设备号<br>3）加密方式有：MD5加密，SHA256加密<br>4）另外还需提供客户的唯一编号(如aid)、申请时间(用于回溯)</p>
+<h2 id="2-2-返回数据整理"><a href="#2-2-返回数据整理" class="headerlink" title="2.2.返回数据整理"></a>2.2.返回数据整理</h2><p>通常对方返回的数据为Excel，包含多个sheet的数据，需要逐一进行数据标准化，标准如下：<br>1）观察每一列的数据含义以及数据类型，对于数值型的空值利用-999，-1等特殊值进行填充<br>2）统一列名，仅限一行，列名为英文，便于直接在HIVE中使用，记录好数据字典<br>3）将每一个sheet的数据另存为csv文件，在Windows中利用notepad++打开文件，将编码调整为utf-8 无bom格式<br>4）统一命名csv文件名</p>
+<h2 id="2-3-数据关联"><a href="#2-3-数据关联" class="headerlink" title="2.3.数据关联"></a>2.3.数据关联</h2><p>将三方返回的数据与自有数据(自有变量、贷后表现、其他属性)进行整合，形成大的数据集<br>1）整理测试样本的自有数据，可包含审批情况、贷后表现、其他三方数据等，形成数据集B，用于不同数据源的交叉验证及区分度分析；<br>2）下载数据集B至返回三方数据同一环境；<br>3）将数据进行整合，形成大数据集合<br>4）记录大表中变量的数据字典</p>
+<h1 id="3-数据分析"><a href="#3-数据分析" class="headerlink" title="3. 数据分析"></a>3. 数据分析</h1><p>将上述汇总数据下载至本地，利用Python进行分析。<br>变量跑批要点：<br>1.特殊值的设定：结合前期2.2中填充的特殊值，设定好参数；<br>2.样本数据集的划分：若单个产品数据量不足，可根据产品划分训练集和验证集。对于数量较多的可按照时间进一步划分；<br>3.目标变量设定：目标变量可以是审批结果或是否逾期；</p>
+<h1 id="4-数据整理"><a href="#4-数据整理" class="headerlink" title="4. 数据整理"></a>4. 数据整理</h1><h2 id="4-1-单变量评估"><a href="#4-1-单变量评估" class="headerlink" title="4.1.单变量评估"></a>4.1.单变量评估</h2><ul>
+<li>变量趋势要好，好的定义：除特殊值外能够单调递增或递减(可适当合并分组)，并且可解释，不与常理违背，比如多头次数越多人越好，这样无法解释，该变量舍弃；</li>
+<li>变量要稳定，稳定的定义：<br>1）在offtime验证集上，变量的分布要比较稳定，可参考PSI；若无offtime验证集，可结合不同产品做适当的判断；<br>2）趋势效果要稳定</li>
+<li>变量可做规则，定义：在变量趋势好的基础上，若能够发现稳定的超过整体2倍badrate的区间，则该变量适合设定规则。</li>
+<li>拒绝区间，要求：要求样本量占总样本量的5%以内(若占比太高，需要质疑)，样本量至少20个人以上</li>
+<li>最好在多个样本上稳定，这样的变量至少适合建模</li>
+</ul>
+<h2 id="4-2-整体数据评估"><a href="#4-2-整体数据评估" class="headerlink" title="4.2.整体数据评估"></a>4.2.整体数据评估</h2><p>1.若个别变量效果很好且稳定且相关性(相关系数矩阵)不大，结合报价决定是否采用<br>2.若效果较好变量比较多，但是又没有特别好(可做规则)的变量，建议联合建模或待定（丰富&amp;源稳定）</p>
+<h2 id="4-3-相关性分析"><a href="#4-3-相关性分析" class="headerlink" title="4.3.相关性分析"></a>4.3.相关性分析</h2><p>1）本次数据中可能涉及多个评分或多个变量，需要评估它们的相关性，以此决定最后可采用数据的质量；<br>2）与其他三方数据源进行相关性分析，若与现有数据源重合性较高，则不采纳；</p>
+<h1 id="5-结果汇总"><a href="#5-结果汇总" class="headerlink" title="5. 结果汇总"></a>5. 结果汇总</h1><ul>
+<li>数据产品概览，可包含行业使用经验</li>
+<li>各项数据的覆盖度</li>
+<li>数据的区分度汇总</li>
+</ul>
+]]></content>
+      <categories>
+        <category>金融科技</category>
+      </categories>
+      <tags>
+        <tag>风控</tag>
       </tags>
   </entry>
   <entry>
@@ -605,9 +605,10 @@
       </tags>
   </entry>
   <entry>
-    <title>风控模型篇|004.拒绝推断</title>
-    <url>/2020/07/17/feng-kong-mo-xing-pian-004-ju-jue-tui-duan/</url>
-    <content><![CDATA[<a id="more"></a>]]></content>
+    <title>风控模型篇|003.催收评分卡开发</title>
+    <url>/2020/07/17/feng-kong-mo-xing-pian-003-cui-shou-ping-fen-qia-kai-fa/</url>
+    <content><![CDATA[<a id="more"></a>
+<h1 id="目标变量定义"><a href="#目标变量定义" class="headerlink" title="目标变量定义"></a>目标变量定义</h1><h1 id="样本选择"><a href="#样本选择" class="headerlink" title="样本选择"></a>样本选择</h1><h1 id="数据源"><a href="#数据源" class="headerlink" title="数据源"></a>数据源</h1>]]></content>
       <categories>
         <category>金融科技</category>
       </categories>
@@ -616,10 +617,9 @@
       </tags>
   </entry>
   <entry>
-    <title>风控模型篇|003.催收评分卡开发</title>
-    <url>/2020/07/17/feng-kong-mo-xing-pian-003-cui-shou-ping-fen-qia-kai-fa/</url>
-    <content><![CDATA[<a id="more"></a>
-<h1 id="目标变量定义"><a href="#目标变量定义" class="headerlink" title="目标变量定义"></a>目标变量定义</h1><h1 id="样本选择"><a href="#样本选择" class="headerlink" title="样本选择"></a>样本选择</h1><h1 id="数据源"><a href="#数据源" class="headerlink" title="数据源"></a>数据源</h1>]]></content>
+    <title>风控模型篇|004.拒绝推断</title>
+    <url>/2020/07/17/feng-kong-mo-xing-pian-004-ju-jue-tui-duan/</url>
+    <content><![CDATA[<a id="more"></a>]]></content>
       <categories>
         <category>金融科技</category>
       </categories>
@@ -639,31 +639,6 @@
       </tags>
   </entry>
   <entry>
-    <title>风控策略篇|003.贷前反欺诈规则</title>
-    <url>/2020/07/17/feng-kong-ce-lue-pian-003-dai-qian-fan-qi-zha-gui-ze/</url>
-    <content><![CDATA[<a id="more"></a>
-<h1 id="1-欺诈风险简介"><a href="#1-欺诈风险简介" class="headerlink" title="1.欺诈风险简介"></a>1.欺诈风险简介</h1><h1 id="1-1-欺诈风险分类"><a href="#1-1-欺诈风险分类" class="headerlink" title="1.1.欺诈风险分类"></a>1.1.欺诈风险分类</h1><p>从作案规模上，信贷反欺诈一般可分为个人欺诈和团队欺诈。<br>个人欺诈重点核查个人及联系人信息，包括：</p>
-<ul>
-<li>黑户风险：借款人及联系人各项信息命中黑名单。包括内部黑名单(逾期严重用户、恶意投诉用户等)、外部外部黑名单（征信&amp;三方数据）；</li>
-<li>恶意欺诈：借款人通过伪造资料、伪造设备等造假行为蓄意骗贷，重点核查用户资料真实性和设备信息；</li>
-<li>身份冒用：伪冒他人身份进行欺诈骗贷。包括熟人冒用（亲戚朋友、同学等）和他人盗用（购买他人四件套、个人隐私信息泄漏等）。一般可通过信审、人脸识别、活体验证等方式来核验借款人身份。需对人脸识别等活体信息进行检测识别；</li>
-<li>中介风险：黑中介哄骗或招揽客户实施骗贷。网贷中介有利有弊，好中介可帮助平台导流（类似贷款超市），提高市场份额；黑中介将对平台风控漏洞进行大规模攻击，造成巨大资损。黑中介可利用白户轻松突破风控防线，并骗取白户的高额手续费。黑中介通讯录一般会存客户的号码；若是远程贷款操作，可能会采取视频通话、翻拍照片来应对活体识别核身；  </li>
-</ul>
-<p>团队欺诈重点核查所有信息之间的关联性，包括：</p>
-<ul>
-<li>地理位置：同一区域申请集中性及历史批核情况</li>
-<li>信息共用：联系人、单位、居住地、设备等</li>
-</ul>
-]]></content>
-      <categories>
-        <category>金融科技</category>
-      </categories>
-      <tags>
-        <tag>贷前</tag>
-        <tag>反欺诈</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>风控策略篇|002.贷中风控策略框架</title>
     <url>/2020/07/16/feng-kong-ce-lue-pian-002-dai-zhong-feng-kong-ce-lue-kuang-jia/</url>
     <content><![CDATA[<a id="more"></a>
@@ -680,43 +655,6 @@
       <tags>
         <tag>贷中</tag>
         <tag>策略</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>风控策略篇|004.贷前信用类规则</title>
-    <url>/2020/07/17/feng-kong-ce-lue-pian-004-dai-qian-xin-yong-lei-gui-ze/</url>
-    <content><![CDATA[<a id="more"></a>
-
-<p>信用类规则重点防范信用风险</p>
-<h1 id="政策类规则"><a href="#政策类规则" class="headerlink" title="政策类规则"></a>政策类规则</h1><ul>
-<li>年龄准入</li>
-<li>地址准入:身份证号码、户籍地址、居住地址、手机号归属</li>
-<li>职业准入:学生职业、学生地址、学生公司</li>
-</ul>
-<h1 id="行为类规则"><a href="#行为类规则" class="headerlink" title="行为类规则"></a>行为类规则</h1><ul>
-<li>历史申请行为</li>
-<li>历史还款行为</li>
-<li>操作设备信息</li>
-</ul>
-<h1 id="核验类规则"><a href="#核验类规则" class="headerlink" title="核验类规则"></a>核验类规则</h1><ul>
-<li>手机入网时长</li>
-<li>手机是否本人实名</li>
-</ul>
-<h1 id="征信类规则"><a href="#征信类规则" class="headerlink" title="征信类规则"></a>征信类规则</h1><ul>
-<li>外部申请历史:人行征信/互金协会/百行征信+百融</li>
-<li>外部授信历史:人行征信/互金协会/百行征信</li>
-<li>外部还款历史:人行征信/互金协会/百行征信+探知</li>
-<li>外部风险名单:百融+51公积金</li>
-<li>外部各项综合评分:各类源数据</li>
-</ul>
-]]></content>
-      <categories>
-        <category>金融科技</category>
-      </categories>
-      <tags>
-        <tag>标签2</tag>
-        <tag>贷前</tag>
-        <tag>标签3</tag>
       </tags>
   </entry>
   <entry>
@@ -756,8 +694,33 @@
         <category>金融科技</category>
       </categories>
       <tags>
-        <tag>贷前</tag>
         <tag>策略</tag>
+        <tag>贷前</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>风控策略篇|003.贷前反欺诈规则</title>
+    <url>/2020/07/17/feng-kong-ce-lue-pian-003-dai-qian-fan-qi-zha-gui-ze/</url>
+    <content><![CDATA[<a id="more"></a>
+<h1 id="1-欺诈风险简介"><a href="#1-欺诈风险简介" class="headerlink" title="1.欺诈风险简介"></a>1.欺诈风险简介</h1><h1 id="1-1-欺诈风险分类"><a href="#1-1-欺诈风险分类" class="headerlink" title="1.1.欺诈风险分类"></a>1.1.欺诈风险分类</h1><p>从作案规模上，信贷反欺诈一般可分为个人欺诈和团队欺诈。<br>个人欺诈重点核查个人及联系人信息，包括：</p>
+<ul>
+<li>黑户风险：借款人及联系人各项信息命中黑名单。包括内部黑名单(逾期严重用户、恶意投诉用户等)、外部外部黑名单（征信&amp;三方数据）；</li>
+<li>恶意欺诈：借款人通过伪造资料、伪造设备等造假行为蓄意骗贷，重点核查用户资料真实性和设备信息；</li>
+<li>身份冒用：伪冒他人身份进行欺诈骗贷。包括熟人冒用（亲戚朋友、同学等）和他人盗用（购买他人四件套、个人隐私信息泄漏等）。一般可通过信审、人脸识别、活体验证等方式来核验借款人身份。需对人脸识别等活体信息进行检测识别；</li>
+<li>中介风险：黑中介哄骗或招揽客户实施骗贷。网贷中介有利有弊，好中介可帮助平台导流（类似贷款超市），提高市场份额；黑中介将对平台风控漏洞进行大规模攻击，造成巨大资损。黑中介可利用白户轻松突破风控防线，并骗取白户的高额手续费。黑中介通讯录一般会存客户的号码；若是远程贷款操作，可能会采取视频通话、翻拍照片来应对活体识别核身；  </li>
+</ul>
+<p>团队欺诈重点核查所有信息之间的关联性，包括：</p>
+<ul>
+<li>地理位置：同一区域申请集中性及历史批核情况</li>
+<li>信息共用：联系人、单位、居住地、设备等</li>
+</ul>
+]]></content>
+      <categories>
+        <category>金融科技</category>
+      </categories>
+      <tags>
+        <tag>贷前</tag>
+        <tag>反欺诈</tag>
       </tags>
   </entry>
   <entry>
@@ -785,6 +748,43 @@
       <tags>
         <tag>贷前</tag>
         <tag>额度</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>风控策略篇|004.贷前信用类规则</title>
+    <url>/2020/07/17/feng-kong-ce-lue-pian-004-dai-qian-xin-yong-lei-gui-ze/</url>
+    <content><![CDATA[<a id="more"></a>
+
+<p>信用类规则重点防范信用风险</p>
+<h1 id="政策类规则"><a href="#政策类规则" class="headerlink" title="政策类规则"></a>政策类规则</h1><ul>
+<li>年龄准入</li>
+<li>地址准入:身份证号码、户籍地址、居住地址、手机号归属</li>
+<li>职业准入:学生职业、学生地址、学生公司</li>
+</ul>
+<h1 id="行为类规则"><a href="#行为类规则" class="headerlink" title="行为类规则"></a>行为类规则</h1><ul>
+<li>历史申请行为</li>
+<li>历史还款行为</li>
+<li>操作设备信息</li>
+</ul>
+<h1 id="核验类规则"><a href="#核验类规则" class="headerlink" title="核验类规则"></a>核验类规则</h1><ul>
+<li>手机入网时长</li>
+<li>手机是否本人实名</li>
+</ul>
+<h1 id="征信类规则"><a href="#征信类规则" class="headerlink" title="征信类规则"></a>征信类规则</h1><ul>
+<li>外部申请历史:人行征信/互金协会/百行征信+百融</li>
+<li>外部授信历史:人行征信/互金协会/百行征信</li>
+<li>外部还款历史:人行征信/互金协会/百行征信+探知</li>
+<li>外部风险名单:百融+51公积金</li>
+<li>外部各项综合评分:各类源数据</li>
+</ul>
+]]></content>
+      <categories>
+        <category>金融科技</category>
+      </categories>
+      <tags>
+        <tag>标签2</tag>
+        <tag>贷前</tag>
+        <tag>标签3</tag>
       </tags>
   </entry>
   <entry>
@@ -840,8 +840,8 @@
         <category>金融科技</category>
       </categories>
       <tags>
-        <tag>反欺诈</tag>
         <tag>贷中</tag>
+        <tag>反欺诈</tag>
       </tags>
   </entry>
   <entry>
